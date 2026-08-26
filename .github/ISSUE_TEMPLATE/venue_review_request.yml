@@ -1,0 +1,42 @@
+name: 🦒 Venue check request
+description: Suggest a meetup spot for the crew to scout.
+title: "[Venue check] "
+labels: [review-request]
+body:
+  - type: input
+    id: venue
+    attributes:
+      label: Venue name
+    validations:
+      required: true
+  - type: input
+    id: suburb
+    attributes:
+      label: Suburb
+    validations:
+      required: true
+  - type: input
+    id: hh-times
+    attributes:
+      label: Best meetup slot (day / time)
+  - type: textarea
+    id: why
+    attributes:
+      label: Why should we check it out?
+    validations:
+      required: true
+  - type: dropdown
+    id: been-before
+    attributes:
+      label: Have you been before?
+      options:
+        - "Yes"
+        - "No"
+  - type: textarea
+    id: best-thing
+    attributes:
+      label: Best thing about it (headroom / vibe / price / light)
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else we should know?

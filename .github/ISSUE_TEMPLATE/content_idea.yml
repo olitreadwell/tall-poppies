@@ -1,0 +1,35 @@
+name: 📝 Content idea
+description: Suggest a post, poll, or joke for the crew.
+title: "[Content] "
+labels: [content]
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - Poll
+        - Joke
+        - Venue check
+        - Meetup recap
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+    validations:
+      required: true
+  - type: textarea
+    id: audience
+    attributes:
+      label: Who's this for? (the crew? a specific segment?)
+  - type: dropdown
+    id: format
+    attributes:
+      label: Suggested format
+      options:
+        - Story
+        - Feed
+        - Broadcast

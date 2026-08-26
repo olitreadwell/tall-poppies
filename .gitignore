@@ -1,0 +1,27 @@
+node_modules
+.next
+out
+dist
+coverage
+playwright-report
+test-results
+.turbo
+.vercel
+*.log
+.DS_Store
+.env
+.env.local
+.env.*.local
+data
+*.tsbuildinfo
+.mypy_cache
+.pytest_cache
+.ruff_cache
+.venv
+
+# Hounds brand assets (large design files, not for the repo)
+assets/images/venue-shots/**/*.psd
+assets/images/venue-shots/**/*.ai
+assets/fonts/**/*.otf
+assets/templates/canva/**/*.psd
+.env*

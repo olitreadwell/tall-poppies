@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "template": "https://github.com/olitreadwell/template.git",
+  "policies": {
+    "copy": [
+      ".codespellrc",
+      ".prettierignore",
+      ".prettierrc.json",
+      ".yamllint.yml",
+      "eslint.config.mjs",
+      "lighthouserc.cjs",
+      ".github/ISSUE_TEMPLATE/bug_report.yml",
+      ".github/ISSUE_TEMPLATE/config.yml",
+      ".github/ISSUE_TEMPLATE/feature_request.yml",
+      ".github/workflows/ci.yml",
+      ".github/workflows/code-review.yml",
+      ".github/workflows/docker.yml",
+      ".github/workflows/quality.yml",
+      ".github/workflows/release.yml",
+      ".github/workflows/security.yml",
+      ".husky/pre-commit",
+      ".husky/pre-push",
+      "scripts/security-checks.sh",
+      "scripts/sync-from-template.mjs",
+      "template-manifest.json",
+      "docs/a11y.md",
+      "docs/audits.md",
+      "docs/ci-optimization.md",
+      "docs/template-sync.md"
+    ],
+    "copyIfAbsent": [
+      ".env.example",
+      ".nvmrc",
+      "AGENTS.md",
+      "CLAUDE.md",
+      ".github/workflows/template-sync.yml",
+      "docs/contact.md",
+      "docs/faq.md"
+    ],
+    "merge": ["package.json"]
+  }
+}
