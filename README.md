@@ -1,6 +1,6 @@
 # 🦒 Tall Poppies Pōneke
 
-[![CI](https://github.com/olitreadwell/tall-poppies-ponke-nz/actions/workflows/ci.yml/badge.svg)](https://github.com/olitreadwell/tall-poppies-ponke-nz/actions/workflows/ci.yml)
+[![CI](https://github.com/olitreadwell/tall-poppies/actions/workflows/ci.yml/badge.svg)](https://github.com/olitreadwell/tall-poppies/actions/workflows/ci.yml)
 
 *Standing tall in Pōneke.*
 
