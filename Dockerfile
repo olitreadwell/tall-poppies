@@ -1,6 +1,8 @@
 # Multi-stage build: install, compile to standalone output, run slim.
 FROM node:22-alpine AS deps
 WORKDIR /app
+# Native modules (better-sqlite3) need a compiler toolchain on Alpine.
+RUN apk add --no-cache python3 make g++
 COPY package.json pnpm-lock.yaml ./
 RUN corepack enable && corepack prepare pnpm@10.33.0 --activate
 RUN pnpm install --frozen-lockfile
@@ -9,7 +11,6 @@ FROM node:22-alpine AS build
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-ENV DOCKER_BUILD=1
 RUN npm run build
 
 FROM node:22-alpine AS runner
