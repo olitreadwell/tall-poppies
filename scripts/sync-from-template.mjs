@@ -10,7 +10,7 @@
 //   node scripts/sync-from-template.mjs --repo ../x    # target another repo
 import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
-import { mkdir, mkdtemp, readFile, writeFile, copyFile, rm } from 'node:fs/promises';
+import { mkdir, mkdtemp, readFile, writeFile, copyFile, readdir, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 
@@ -53,6 +53,28 @@ function readJson(path) {
   return JSON.parse(readFileSync(path, 'utf8'));
 }
 
+// A manifest entry is either a path string or { path, if }. The `if` value
+// is a top-level glob (e.g. "package.json", "next.config.*") that must match
+// something in the target repo for the file to be copied.
+function entryPath(entry) {
+  return typeof entry === 'string' ? entry : entry.path;
+}
+
+function entryCondition(entry) {
+  return typeof entry === 'string' ? null : (entry.if ?? null);
+}
+
+function globToRegExp(glob) {
+  return new RegExp(`^${glob.replace(/[.+^${}()|[\]\\]/g, '\\$&').replace(/\*/g, '.*')}$`);
+}
+
+async function conditionMet(condition, targetDir) {
+  if (!condition) return true;
+  const entries = await readdir(targetDir);
+  const re = globToRegExp(condition);
+  return entries.some((name) => re.test(name));
+}
+
 async function main() {
   if (!isGitRepo()) {
     console.error(`not a git repo: ${repoDir}`);
@@ -71,13 +93,18 @@ async function main() {
     const changes = [];
     for (const policy of ['copy', 'copyIfAbsent']) {
       for (const rel of manifest.policies[policy]) {
-        const src = join(tmpl, rel);
-        const dst = join(repoDir, rel);
+        const path = entryPath(rel);
+        const condition = entryCondition(rel);
+        if (!(await conditionMet(condition, repoDir))) {
+          continue; // target repo does not match the condition
+        }
+        const src = join(tmpl, path);
+        const dst = join(repoDir, path);
         let srcContent;
         try {
           srcContent = await readFile(src);
         } catch {
-          console.warn(`  SKIP (missing in template): ${rel}`);
+          console.warn(`  SKIP (missing in template): ${path}`);
           continue;
         }
         let dstExists = true;
@@ -93,7 +120,7 @@ async function main() {
         if (dstExists && srcContent.equals(dstContent)) {
           continue; // already in sync
         }
-        changes.push({ rel, action: dstExists ? 'UPDATE' : 'ADD' });
+        changes.push({ rel: path, action: dstExists ? 'UPDATE' : 'ADD' });
         if (apply) {
           await mkdirp(dirname(dst));
           await copyFile(src, dst);
@@ -112,8 +139,13 @@ async function main() {
       }
       const merged = structuredClone(localPkg);
       merged.scripts = { ...tmplPkg.scripts, ...(localPkg.scripts ?? {}) };
-      merged.devDependencies = { ...tmplPkg.devDependencies, ...(localPkg.devDependencies ?? {}) };
-      merged.dependencies = { ...tmplPkg.dependencies, ...(localPkg.dependencies ?? {}) };
+      // Runtime deps stay local: template app deps (Radix, nodemailer, …)
+      // are opt-in per repo, not forced by a sync.
+      merged.dependencies = localPkg.dependencies ?? {};
+      // Tooling stays local too: template devDeps (vitest 4, playwright, …)
+      // can conflict with a repo's pinned majors (ERESOLVE). A sync must
+      // never break `npm install`; repos adopt tooling upgrades by choice.
+      merged.devDependencies = localPkg.devDependencies ?? {};
       merged.packageManager = localPkg.packageManager ?? tmplPkg.packageManager;
       if (JSON.stringify(merged) !== JSON.stringify(localPkg)) {
         changes.push({ rel: 'package.json', action: 'MERGE' });
@@ -139,7 +171,9 @@ async function main() {
     const branch = 'chore/template-sync';
     try {
       run(['git', 'branch', '-D', branch]);
-    } catch {}
+    } catch {
+      // Branch does not exist locally yet; nothing to delete.
+    }
     run(['git', 'checkout', '-q', '-b', branch]);
     run(['git', 'add', '-A']);
     run(['git', 'commit', '-q', '-m', 'chore: sync files from template', '--allow-empty']);
