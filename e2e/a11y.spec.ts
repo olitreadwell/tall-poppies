@@ -8,6 +8,9 @@ const routes = ['/', '/contact', '/feedback', '/help'];
 test.describe('a11y audit (WCAG 2.2 A/AA + best practice)', () => {
   for (const route of routes) {
     test(`${route} has no axe violations`, async ({ page }) => {
+      // Disable reveal/transition animations so axe measures the stable
+      // (fully opaque) state instead of mid-fade colors.
+      await page.emulateMedia({ reducedMotion: 'reduce' });
       await page.goto(route);
       const results = await new AxeBuilder({ page })
         .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'])
