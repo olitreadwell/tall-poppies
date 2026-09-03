@@ -25,6 +25,8 @@
       { "path": "scripts/security-checks.sh", "if": "package.json" },
       { "path": "scripts/check-external-links.mjs", "if": "package.json" },
       { "path": "scripts/sync-from-template.mjs" },
+      { "path": "scripts/check-internal-links.mjs", "if": "package.json" },
+      { "path": "scripts/smoke.sh", "if": "package.json" },
       { "path": "template-manifest.json" },
       { "path": "docs/a11y.md" },
       { "path": "docs/api.md" },
