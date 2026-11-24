@@ -25,3 +25,7 @@ assets/images/venue-shots/**/*.ai
 assets/fonts/**/*.otf
 assets/templates/canva/**/*.psd
 .env*
+
+# Python bytecode from design scripts
+__pycache__/
+*.pyc
