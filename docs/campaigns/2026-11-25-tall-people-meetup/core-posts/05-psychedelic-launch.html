@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Psychedelic, launch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Space+Grotesk:wght@400;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        background: #222;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      .post {
+        width: 1080px;
+        height: 1350px;
+        position: relative;
+        overflow: hidden;
+        background: #1b0b2e;
+        color: #ffffff;
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      .art {
+        position: absolute;
+        inset: 0;
+        background: url('../photos/10-psychedelic.jpg') center/cover no-repeat;
+        filter: saturate(1.45) contrast(1.08);
+      }
+      .art:after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(27, 11, 46, 0.94) 0%,
+          rgba(27, 11, 46, 0.66) 34%,
+          rgba(27, 11, 46, 0.18) 56%,
+          rgba(27, 11, 46, 0.9) 100%
+        );
+      }
+      .kicker {
+        position: absolute;
+        left: 64px;
+        top: 62px;
+        font-family: 'Space Mono', monospace;
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: 0.17em;
+        color: #38d66b;
+      }
+      h1 {
+        position: absolute;
+        left: 60px;
+        top: 136px;
+        width: 850px;
+        font-family: 'Fraunces', serif;
+        font-weight: 900;
+        font-size: 96px;
+        line-height: 0.94;
+        letter-spacing: -0.025em;
+        text-shadow: 0 5px 0 rgba(27, 11, 46, 0.55);
+      }
+      h1 em {
+        font-style: italic;
+        color: #ff4fa3;
+      }
+      .oval {
+        position: absolute;
+        right: 34px;
+        top: 560px;
+        width: 300px;
+        height: 430px;
+        border: 12px solid #ff4fa3;
+        border-radius: 50%;
+        transform: rotate(24deg);
+        mix-blend-mode: screen;
+        opacity: 0.95;
+      }
+      .squiggle {
+        position: absolute;
+        left: 58px;
+        top: 640px;
+        width: 590px;
+        height: 180px;
+      }
+      .date {
+        position: absolute;
+        right: 74px;
+        top: 712px;
+        width: 232px;
+        height: 232px;
+        border-radius: 50%;
+        background: #ff4fa3;
+        border: 10px solid #1b0b2e;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #1b0b2e;
+        transform: rotate(-8deg);
+      }
+      .date b {
+        font-family: 'Fraunces', serif;
+        font-size: 62px;
+        line-height: 0.9;
+        font-weight: 900;
+      }
+      .date span {
+        font-family: 'Space Mono', monospace;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        margin-top: 6px;
+      }
+      .panel {
+        position: absolute;
+        left: 58px;
+        top: 980px;
+        width: 964px;
+        height: 250px;
+        background: #1b0b2e;
+        border: 6px solid #38d66b;
+        padding: 26px 32px;
+      }
+      .panel .venue {
+        font-family: 'Fraunces', serif;
+        font-size: 44px;
+        line-height: 1;
+        font-weight: 900;
+        color: #ffffff;
+      }
+      .panel .where {
+        font-family: 'Space Mono', monospace;
+        font-size: 21px;
+        line-height: 1.55;
+        font-weight: 700;
+        color: #38d66b;
+        margin-top: 14px;
+      }
+      .panel .welcome {
+        position: absolute;
+        right: 30px;
+        bottom: 24px;
+        font-family: 'Space Mono', monospace;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        color: #ff4fa3;
+      }
+      .tag {
+        position: absolute;
+        left: 64px;
+        top: 890px;
+        background: #38d66b;
+        color: #1b0b2e;
+        font-family: 'Space Mono', monospace;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        padding: 8px 12px;
+        transform: rotate(-2deg);
+      }
+      .foot {
+        position: absolute;
+        left: 64px;
+        bottom: 30px;
+        font-family: 'Space Mono', monospace;
+        font-size: 13px;
+        letter-spacing: 0.14em;
+        color: #ff4fa3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="post">
+      <div class="art"></div>
+      <div class="kicker">TALL PEOPLE MEETUP / WELLINGTON</div>
+      <h1>YOU WILL NOT<br />BE THE <em>TALLEST</em><br />PERSON<br />IN THE ROOM</h1>
+      <div class="oval"></div>
+      <svg class="squiggle" viewBox="0 0 590 180" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M-10 120 C 70 10, 130 170, 210 80 S 340 10, 410 100 S 520 170, 600 60"
+          fill="none"
+          stroke="#38D66B"
+          stroke-width="18"
+          stroke-linecap="round"
+        />
+      </svg>
+      <div class="date">
+        <b>25<br />NOV</b><span>5PM TO 8PM</span>
+      </div>
+      <div class="tag">PSYCHEDELIC / 1967</div>
+      <div class="panel">
+        <div class="venue">ROSIE'S RED-HOT CANTINA</div>
+        <div class="where">
+          4 QUEENS WHARF, WELLINGTON<br />WEDNESDAY 25 NOVEMBER<br />5PM TO 8PM / NO TICKET
+        </div>
+        <div class="welcome">ALL WELCOME / BRING A MATE</div>
+      </div>
+      <div class="foot">TALL PEOPLE MEETUP WELLINGTON / 2026</div>
+    </div>
+  </body>
+</html>

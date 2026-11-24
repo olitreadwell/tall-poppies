@@ -1,0 +1,1437 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tall People Meetup Wellington - 20 design directions</title>
+    <style>
+      :root {
+        --cream: #f3efe6;
+        --paper: #e8e2d4;
+        --ink: #1b211d;
+        --forest: #22352c;
+        --sage: #8fa089;
+        --terra: #c4693f;
+        --sun: #d9905a;
+        --red: #d23f2a;
+        --white: #fff;
+        --news: #efebe0;
+        --chalk: #f2f0e8;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #fff;
+        color: #111;
+        padding: 40px 36px 56px;
+        font:
+          13px/1.35 'Helvetica Neue',
+          Helvetica,
+          Arial,
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1 {
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+      }
+      .sub {
+        color: #6b6b6b;
+        font-size: 12px;
+        margin: 6px 0 28px;
+        max-width: 760px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 360px);
+        gap: 34px 26px;
+      }
+      figure {
+        width: 360px;
+      }
+      .poster {
+        width: 360px;
+        height: 450px;
+        position: relative;
+        overflow: hidden;
+        background: var(--cream);
+      }
+      figcaption {
+        margin-top: 9px;
+        font-size: 12px;
+        color: #111;
+      }
+      figcaption b {
+        font-weight: 700;
+        margin-right: 6px;
+        font-variant-numeric: tabular-nums;
+      }
+      figcaption em {
+        display: block;
+        color: #7a7a7a;
+        font-style: normal;
+        font-size: 11px;
+        margin-top: 2px;
+      }
+      img {
+        display: block;
+        width: 100%;
+      }
+      .poster {
+        outline: 1px solid rgba(0, 0, 0, 0.07);
+      }
+
+      /* 01 International / Swiss */
+      .p01 {
+        padding: 26px 24px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        color: #111;
+        background: #f7f7f4;
+      }
+      .p01 .k {
+        font-size: 31px;
+        line-height: 0.98;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+      .p01 .yr {
+        position: absolute;
+        top: 26px;
+        right: 24px;
+        font-size: 10px;
+        letter-spacing: 0.08em;
+      }
+      .p01 hr {
+        border: 0;
+        border-top: 6px solid #d23f2a;
+        margin: 20px 0 16px;
+      }
+      .p01 .date {
+        font-size: 58px;
+        line-height: 0.85;
+        font-weight: 700;
+        letter-spacing: -0.045em;
+      }
+      .p01 .date span {
+        font-size: 20px;
+        letter-spacing: -0.02em;
+        display: block;
+        margin-top: 6px;
+      }
+      .p01 .det {
+        position: absolute;
+        left: 24px;
+        bottom: 52px;
+        font-size: 12px;
+        line-height: 1.55;
+      }
+      .p01 .det b {
+        font-weight: 700;
+      }
+      .p01 .foot {
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        bottom: 20px;
+        font-size: 9px;
+        letter-spacing: 0.12em;
+        border-top: 1px solid #111;
+        padding-top: 6px;
+      }
+
+      /* 02 Constructivist */
+      .p02 {
+        background: #efe7d9;
+        overflow: hidden;
+      }
+      .p02 .block {
+        position: absolute;
+        inset: 0;
+        background: #1b211d;
+      }
+      .p02 .slash {
+        position: absolute;
+        width: 900px;
+        height: 120px;
+        background: #d23f2a;
+        transform: rotate(-38deg);
+        left: -230px;
+        top: 150px;
+      }
+      .p02 .k {
+        position: absolute;
+        top: 26px;
+        left: 24px;
+        color: #efe7d9;
+        font-family: Impact, 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+        font-size: 44px;
+        line-height: 0.9;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        width: 230px;
+      }
+      .p02 .when {
+        position: absolute;
+        bottom: 80px;
+        left: 24px;
+        color: #efe7d9;
+        background: #1b211d;
+        padding: 7px 8px 8px 0;
+        font-family: 'Courier New', monospace;
+        font-size: 11px;
+        line-height: 1.7;
+        letter-spacing: 0.06em;
+      }
+      .p02 .big {
+        position: absolute;
+        top: 24px;
+        right: 18px;
+        color: #d23f2a;
+        font-family: Impact, 'Haettenschweiler', sans-serif;
+        font-size: 54px;
+        letter-spacing: -0.01em;
+      }
+
+      /* 03 Screenprint gig */
+      .p03 {
+        background: #f1ebe0;
+        padding: 22px 20px;
+        font-family: Impact, 'Haettenschweiler', 'Arial Narrow Bold', sans-serif;
+        text-transform: uppercase;
+      }
+      .p03 .stack {
+        position: relative;
+        color: #1b211d;
+      }
+      .p03 .stack span {
+        display: block;
+        line-height: 0.82;
+        letter-spacing: -0.005em;
+      }
+      .p03 .l1 {
+        font-size: 62px;
+      }
+      .p03 .l2 {
+        font-size: 62px;
+        margin-left: 18px;
+        color: #c4693f;
+      }
+      .p03 .l3 {
+        font-size: 34px;
+        margin-left: 3px;
+        margin-top: 4px;
+      }
+      .p03 .img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 180px;
+        object-fit: cover;
+        object-position: 50% 18%;
+        filter: grayscale(1) contrast(1.15);
+      }
+      .p03 .when {
+        position: absolute;
+        left: 20px;
+        bottom: 196px;
+        font-family: 'Courier New', monospace;
+        font-size: 10px;
+        line-height: 1.6;
+        letter-spacing: 0.05em;
+        color: #1b211d;
+      }
+
+      /* 04 Matchbook */
+      .p04 {
+        background: #c4693f;
+        padding: 24px;
+        color: #f6f1e6;
+        display: flex;
+        flex-direction: column;
+      }
+      .p04 .top {
+        font-family: 'Courier New', monospace;
+        font-size: 9px;
+        letter-spacing: 0.18em;
+        opacity: 0.8;
+      }
+      .p04 .mid {
+        margin-top: auto;
+        font-family: 'Helvetica Neue', Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 0.95;
+        letter-spacing: -0.02em;
+      }
+      .p04 .mid small {
+        display: block;
+        font-size: 11px;
+        font-weight: 400;
+        letter-spacing: 0.14em;
+        margin-top: 12px;
+      }
+      .p04 .bot {
+        margin-top: 18px;
+        border-top: 1px solid rgba(246, 241, 230, 0.55);
+        padding-top: 10px;
+        font-family: 'Courier New', monospace;
+        font-size: 9.5px;
+        line-height: 1.75;
+        letter-spacing: 0.04em;
+      }
+      .p04 .notch {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -30px;
+        height: 44px;
+        background: var(--cream);
+      }
+
+      /* 05 Ticket stump */
+      .p05 {
+        background: #f1ebe0;
+        padding: 0;
+        font-family: 'Courier New', monospace;
+      }
+      .p05 .head {
+        background: #1b211d;
+        color: #f1ebe0;
+        padding: 12px 18px;
+        font-size: 10px;
+        letter-spacing: 0.2em;
+      }
+      .p05 .body {
+        padding: 18px;
+      }
+      .p05 .num {
+        font-family: 'Helvetica Neue', Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 0.85;
+        letter-spacing: -0.04em;
+      }
+      .p05 .mon {
+        font-size: 10.5px;
+        line-height: 1.8;
+        letter-spacing: 0.05em;
+        margin-top: 10px;
+      }
+      .p05 .perf {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 86px;
+        border-top: 2px dashed #1b211d;
+      }
+      .p05 .stub {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 86px;
+        background: #c4693f;
+        color: #1b211d;
+        padding: 12px 18px;
+        font-size: 9.5px;
+        letter-spacing: 0.14em;
+        line-height: 1.7;
+      }
+      .p05 .stub b {
+        display: block;
+        font-size: 16px;
+        letter-spacing: 0.02em;
+      }
+
+      /* 06 Classified */
+      .p06 {
+        background: #efebe0;
+        padding: 16px 16px 14px;
+        font-family: Georgia, 'Times New Roman', serif;
+        color: #141414;
+      }
+      .p06 .mast {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 9px;
+        letter-spacing: 0.22em;
+        border-bottom: 3px solid #141414;
+        padding-bottom: 5px;
+        margin-bottom: 8px;
+      }
+      .p06 .cols {
+        column-count: 3;
+        column-gap: 9px;
+        font-size: 9px;
+        line-height: 1.42;
+      }
+      .p06 .cols p {
+        margin-bottom: 6px;
+      }
+      .p06 .h {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 0.95;
+        letter-spacing: -0.03em;
+        margin-bottom: 8px;
+      }
+
+      /* 07 Museum caption */
+      .p07 {
+        background: #fff;
+        padding: 34px 30px;
+        display: flex;
+        flex-direction: column;
+      }
+      .p07 .img {
+        width: 170px;
+        margin: 0 auto;
+      }
+      .p07 .cap {
+        margin-top: 16px;
+        font-family: 'Helvetica Neue', Helvetica, sans-serif;
+        font-size: 8.5px;
+        line-height: 1.6;
+        color: #333;
+        max-width: 210px;
+      }
+      .p07 .cap b {
+        font-style: italic;
+        font-weight: 400;
+      }
+      .p07 .title {
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+        font-family: Georgia, serif;
+        font-size: 15px;
+        letter-spacing: 0.01em;
+      }
+      .p07 .title small {
+        display: block;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-size: 9px;
+        letter-spacing: 0.1em;
+        color: #555;
+        margin-top: 4px;
+      }
+
+      /* 08 Sleeve */
+      .p08 {
+        background: #1b211d;
+      }
+      .p08 .img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .p08 .t {
+        position: absolute;
+        left: 14px;
+        top: 12px;
+        color: #f6f1e6;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-size: 8.5px;
+        letter-spacing: 0.2em;
+        line-height: 1.8;
+      }
+      .p08 .b {
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        bottom: 12px;
+        color: #f6f1e6;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-size: 8.5px;
+        letter-spacing: 0.16em;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      /* 09 Wayfinding */
+      .p09 {
+        background: #f2f1ea;
+        padding: 24px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+      .p09 .k {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+      }
+      .p09 .steps {
+        margin-top: 20px;
+      }
+      .p09 .step {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        border-top: 1px solid #1b211d;
+        padding: 9px 0;
+      }
+      .p09 .n {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        width: 16px;
+      }
+      .p09 .big {
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        line-height: 1.05;
+      }
+      .p09 .small {
+        font-size: 10px;
+        color: #3a3a3a;
+        margin-top: 2px;
+        line-height: 1.5;
+      }
+      .p09 .arrow {
+        position: absolute;
+        right: 22px;
+        bottom: 22px;
+        font-size: 44px;
+        line-height: 1;
+        color: #22352c;
+      }
+      .p09 .bar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 10px;
+        background: #22352c;
+      }
+
+      /* 10 Chalkboard */
+      .p10 {
+        background: #22352c;
+        padding: 26px 22px;
+        color: #f2f0e8;
+        font-family: 'Arial Narrow', 'Helvetica Neue', Helvetica, sans-serif;
+      }
+      .p10 .k {
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 0.92;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+      }
+      .p10 .line {
+        border-top: 1px solid rgba(242, 240, 232, 0.4);
+        margin: 14px 0;
+      }
+      .p10 .when {
+        font-family: 'Courier New', monospace;
+        font-size: 11px;
+        line-height: 1.8;
+        letter-spacing: 0.05em;
+      }
+      .p10 .img {
+        position: absolute;
+        right: -30px;
+        bottom: -20px;
+        width: 230px;
+        opacity: 0.28;
+        filter: grayscale(1);
+      }
+      .p10 .all {
+        position: absolute;
+        left: 22px;
+        bottom: 22px;
+        font-family: 'Courier New', monospace;
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        color: #d9905a;
+      }
+
+      /* 11 Riso */
+      .p11 {
+        background: #f4efe2;
+        padding: 20px;
+      }
+      .p11 .dot {
+        position: absolute;
+        width: 210px;
+        height: 210px;
+        border-radius: 50%;
+        background: #d23f2a;
+        top: -40px;
+        right: -50px;
+        mix-blend-mode: multiply;
+        opacity: 0.92;
+      }
+      .p11 .sq {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background: #1f5a43;
+        bottom: 96px;
+        left: -30px;
+        transform: rotate(8deg);
+        mix-blend-mode: multiply;
+        opacity: 0.85;
+      }
+      .p11 .k {
+        position: relative;
+        font-family: 'Helvetica Neue', Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 29px;
+        line-height: 0.95;
+        letter-spacing: -0.02em;
+        color: #1b211d;
+        width: 200px;
+      }
+      .p11 .k span {
+        color: #d23f2a;
+      }
+      .p11 .when {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        font-family: 'Courier New', monospace;
+        font-size: 9.5px;
+        line-height: 1.75;
+        letter-spacing: 0.04em;
+        z-index: 2;
+      }
+
+      /* 12 Field guide */
+      .p12 {
+        background: #e4e6d8;
+        padding: 24px;
+        font-family: Baskerville, Georgia, serif;
+        color: #22352c;
+      }
+      .p12 .plate {
+        font-family: 'Courier New', monospace;
+        font-size: 8.5px;
+        letter-spacing: 0.2em;
+      }
+      .p12 .img {
+        width: 100%;
+        height: 236px;
+        object-fit: cover;
+        object-position: 50% 30%;
+        margin-top: 12px;
+        filter: saturate(0.7);
+      }
+      .p12 .nm {
+        margin-top: 12px;
+        font-size: 22px;
+        letter-spacing: 0.01em;
+      }
+      .p12 .lat {
+        font-style: italic;
+        font-size: 11px;
+        color: #44564b;
+      }
+      .p12 .when {
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        bottom: 20px;
+        font-family: 'Courier New', monospace;
+        font-size: 9px;
+        line-height: 1.7;
+        letter-spacing: 0.04em;
+        border-top: 1px solid #22352c;
+        padding-top: 8px;
+      }
+
+      /* 13 Bauhaus */
+      .p13 {
+        background: #f3efe6;
+        padding: 22px;
+        font-family: Futura, 'Century Gothic', 'Helvetica Neue', sans-serif;
+      }
+      .p13 .c {
+        position: absolute;
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        background: #c4693f;
+        right: -30px;
+        top: 120px;
+      }
+      .p13 .t {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 56px solid transparent;
+        border-right: 56px solid transparent;
+        border-bottom: 98px solid #22352c;
+        left: -6px;
+        bottom: 66px;
+      }
+      .p13 .k {
+        position: relative;
+        font-size: 25px;
+        line-height: 1.1;
+        letter-spacing: 0.02em;
+        color: #1b211d;
+        width: 210px;
+        font-weight: 400;
+      }
+      .p13 .k b {
+        font-weight: 700;
+      }
+      .p13 .when {
+        position: absolute;
+        left: 22px;
+        bottom: 22px;
+        font-size: 9px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        z-index: 2;
+      }
+
+      /* 14 Editorial */
+      .p14 {
+        background: #fff;
+        padding: 0;
+        font-family: Georgia, serif;
+        color: #141414;
+      }
+      .p14 .img {
+        height: 196px;
+        object-fit: cover;
+        object-position: 50% 35%;
+      }
+      .p14 .pad {
+        padding: 16px 20px;
+      }
+      .p14 .kick {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-size: 8px;
+        letter-spacing: 0.2em;
+        color: #777;
+      }
+      .p14 .h {
+        font-size: 21px;
+        line-height: 1.08;
+        letter-spacing: -0.01em;
+        margin-top: 6px;
+      }
+      .p14 .deck {
+        margin-top: 10px;
+        font-size: 10.5px;
+        line-height: 1.5;
+        max-width: 270px;
+      }
+      .p14 .deck::first-letter {
+        float: left;
+        font-size: 30px;
+        line-height: 0.85;
+        padding-right: 4px;
+      }
+      .p14 .when {
+        margin-top: 10px;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-size: 9px;
+        letter-spacing: 0.08em;
+      }
+
+      /* 15 Memo */
+      .p15 {
+        background: #fff;
+        padding: 26px 24px;
+        font-family: 'Times New Roman', Times, serif;
+        color: #111;
+      }
+      .p15 .org {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-size: 8.5px;
+        letter-spacing: 0.2em;
+        border-bottom: 2px solid #111;
+        padding-bottom: 6px;
+      }
+      .p15 .memo {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-size: 9px;
+        letter-spacing: 0.3em;
+        margin-top: 14px;
+        color: #666;
+      }
+      .p15 table {
+        margin-top: 12px;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-size: 9px;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      .p15 td {
+        padding: 3px 0;
+        vertical-align: top;
+      }
+      .p15 td:first-child {
+        width: 52px;
+        color: #666;
+      }
+      .p15 .rule {
+        border-top: 1px solid #111;
+        margin: 12px 0;
+      }
+      .p15 ul {
+        list-style: none;
+        font-size: 10.5px;
+        line-height: 1.7;
+      }
+      .p15 li {
+        padding-left: 12px;
+        position: relative;
+      }
+      .p15 li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 5px;
+        height: 5px;
+        background: #111;
+      }
+
+      /* 16 Zine */
+      .p16 {
+        background: #f2f0e9;
+        padding: 0;
+        font-family: 'Courier New', monospace;
+        color: #111;
+      }
+      .p16 .img {
+        height: 250px;
+        object-fit: cover;
+        filter: grayscale(1) contrast(1.5) brightness(1.05);
+      }
+      .p16 .halftone {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 250px;
+        background-image: radial-gradient(#000 1px, transparent 1.1px);
+        background-size: 3px 3px;
+        opacity: 0.22;
+        mix-blend-mode: multiply;
+      }
+      .p16 .k {
+        position: absolute;
+        left: 8px;
+        top: 196px;
+        background: #f2f0e9;
+        font-size: 34px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        padding: 2px 4px;
+      }
+      .p16 .sub2 {
+        position: absolute;
+        left: 10px;
+        top: 260px;
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        color: #111;
+      }
+      .p16 .when {
+        position: absolute;
+        left: 10px;
+        bottom: 24px;
+        font-size: 10px;
+        line-height: 1.8;
+        letter-spacing: 0.03em;
+        transform: rotate(-1deg);
+      }
+      .p16 .all {
+        position: absolute;
+        right: 10px;
+        bottom: 16px;
+        font-size: 9px;
+        letter-spacing: 0.16em;
+        transform: rotate(1.5deg);
+        background: #111;
+        color: #f2f0e9;
+        padding: 3px 5px;
+      }
+
+      /* 17 Highway */
+      .p17 {
+        background: #e8e43a;
+        padding: 18px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        color: #111;
+      }
+      .p17 .plate {
+        border: 5px solid #111;
+        padding: 12px 12px 14px;
+        height: 100%;
+      }
+      .p17 .k {
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 0.95;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+      }
+      .p17 .img {
+        height: 120px;
+        object-fit: cover;
+        margin-top: 10px;
+        filter: grayscale(1) contrast(1.2);
+      }
+      .p17 .when {
+        margin-top: 10px;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 1.25;
+      }
+      .p17 .sm {
+        font-size: 8.5px;
+        letter-spacing: 0.12em;
+        margin-top: 8px;
+      }
+      .p17 .all {
+        position: absolute;
+        bottom: 26px;
+        right: 30px;
+        font-size: 8px;
+        letter-spacing: 0.2em;
+      }
+
+      /* 18 Supergraphic */
+      .p18 {
+        background: #1b211d;
+      }
+      .p18 .word {
+        position: absolute;
+        left: -8px;
+        top: -26px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        font-size: 250px;
+        line-height: 0.75;
+        letter-spacing: -0.05em;
+        color: #f3efe6;
+        opacity: 0.97;
+      }
+      .p18 .img {
+        position: absolute;
+        right: 18px;
+        bottom: 70px;
+        width: 150px;
+        height: 110px;
+        object-fit: cover;
+        border: 3px solid #1b211d;
+      }
+      .p18 .when {
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+        color: #c4693f;
+        font-family: 'Courier New', monospace;
+        font-size: 10px;
+        line-height: 1.8;
+        letter-spacing: 0.05em;
+      }
+
+      /* 19 Night invert */
+      .p19 {
+        background: #22352c;
+        padding: 26px 24px;
+        color: #f3efe6;
+      }
+      .p19 .k {
+        font-family: 'Arial Narrow', 'Helvetica Neue', sans-serif;
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 0.9;
+        text-transform: uppercase;
+      }
+      .p19 .mark {
+        width: 52px;
+        height: 8px;
+        background: #c4693f;
+        margin: 16px 0;
+      }
+      .p19 .when {
+        font-family: 'Courier New', monospace;
+        font-size: 10.5px;
+        line-height: 1.85;
+        letter-spacing: 0.04em;
+      }
+      .p19 .img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 150px;
+        object-fit: cover;
+        object-position: 50% 45%;
+        opacity: 0.9;
+      }
+      .p19 .all {
+        position: absolute;
+        right: 24px;
+        top: 26px;
+        font-family: 'Courier New', monospace;
+        font-size: 9px;
+        letter-spacing: 0.2em;
+        writing-mode: vertical-rl;
+        color: #8fa089;
+      }
+
+      /* 20 Fixture */
+      .p20 {
+        background: #f6f4ec;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        padding: 0;
+        color: #111;
+      }
+      .p20 .bar {
+        background: #22352c;
+        color: #f6f4ec;
+        padding: 9px 16px;
+        font-size: 8.5px;
+        letter-spacing: 0.24em;
+      }
+      .p20 .round {
+        padding: 14px 16px 0;
+        font-size: 8.5px;
+        letter-spacing: 0.18em;
+        color: #6a6a6a;
+      }
+      .p20 .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 9px 16px;
+        border-bottom: 1px solid #d8d4c6;
+      }
+      .p20 .row .d {
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+      }
+      .p20 .row .t {
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+      .p20 .row .s {
+        font-size: 8.5px;
+        letter-spacing: 0.12em;
+        color: #6a6a6a;
+      }
+      .p20 .note {
+        padding: 12px 16px;
+        font-size: 9.5px;
+        line-height: 1.6;
+        color: #333;
+      }
+      .p20 .all {
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        bottom: 12px;
+        border-top: 2px solid #22352c;
+        padding-top: 7px;
+        font-size: 8px;
+        letter-spacing: 0.2em;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tall People Meetup Wellington - 20 directions</h1>
+    <p class="sub">
+      Same event, same words, twenty different design languages. Pick a number or two. Each one is a
+      real lineage, not a filter. Numbers 03, 08, 10 and 12 use the giraffe cover. The rest are
+      type-led.
+    </p>
+    <div class="grid">
+      <figure>
+        <div class="poster p01">
+          <div class="k">Tall People<br />Meetup<br />Wellington</div>
+          <div class="yr">LAUNCH / 2026</div>
+          <hr />
+          <div class="date">25<span>NOV</span></div>
+          <div class="det">
+            <b>Wednesday, 5 to 7pm</b><br />Rosie's Red-Hot Cantina<br />4 Queens Wharf<br />All
+            welcome
+          </div>
+          <div class="foot">FIRST MEETUP - WELLINGTON</div>
+        </div>
+        <figcaption>
+          <b>01</b> International Style<em
+            >Helvetica, flush left, one red rule. Neutral and confident.</em
+          >
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p02">
+          <div class="block"></div>
+          <div class="slash"></div>
+          <div class="k">Tall<br />People<br />Meetup<br />Wgtn</div>
+          <div class="when">
+            WED 25 NOV<br />5 to 7PM<br />ROSIE'S, QUEENS WHARF<br />ALL WELCOME
+          </div>
+        </div>
+        <figcaption>
+          <b>02</b> Constructivist<em
+            >Rotated band, hard diagonal, red on black. Loud without illustration.</em
+          >
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p03">
+          <div class="stack">
+            <span class="l1">Tall</span><span class="l2">People</span
+            ><span class="l3">Meetup Wgtn</span>
+          </div>
+          <div class="when">WED 25 NOV<br />5-7PM<br />ROSIE'S - QUEENS WHARF<br />ALL WELCOME</div>
+          <img class="img" src="event-cover.jpg" alt="" />
+        </div>
+        <figcaption>
+          <b>03</b> Screenprint gig<em
+            >Condensed caps, overprint accent, the cover cropped to a band.
+          </em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p04">
+          <div class="top">WELLINGTON - NOV 2026</div>
+          <div class="mid">Tall<br />People<br />Meetup<small>FIRST ONE</small></div>
+          <div class="bot">
+            WED 25 NOV<br />5PM TO 7PM<br />ROSIE'S RED-HOT CANTINA<br />4 QUEENS WHARF<br />ALL
+            WELCOME
+          </div>
+          <div class="notch"></div>
+        </div>
+        <figcaption>
+          <b>04</b> Matchbook<em>One colour, small format energy. Works as a sticker too.</em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p05">
+          <div class="head">ADMIT ONE - WELLINGTON</div>
+          <div class="body">
+            <div class="num">25<br />NOV</div>
+            <div class="mon">
+              WEDNESDAY<br />5PM TO 7PM<br />ROSIE'S RED-HOT CANTINA<br />4 QUEENS WHARF<br />ALL
+              WELCOME
+            </div>
+          </div>
+          <div class="perf"></div>
+          <div class="stub">TALL PEOPLE MEETUP<b>FIRST ONE</b>NO CHARGE - JUST TURN UP</div>
+        </div>
+        <figcaption>
+          <b>05</b> Ticket stub<em
+            >Perforation, mono numerals, tear-off. Feels like a real night out.</em
+          >
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p06">
+          <div class="mast">WELLINGTON NOTICES</div>
+          <div class="h">Tall People<br />Meetup</div>
+          <div class="cols">
+            <p>First meetup for tall people in Wellington, and anyone who likes them.</p>
+            <p>Wednesday 25 November, 5pm to 7pm. Rosie's Red-Hot Cantina, 4 Queens Wharf.</p>
+            <p>No charge. No membership. All welcome.</p>
+            <p>If you don't quite qualify, bring a tall friend.</p>
+            <p>Drink prize for the tallest person on the night.</p>
+            <p>Tall-advantaged sport welcome. Basketball, netball, volleyball.</p>
+          </div>
+        </div>
+        <figcaption>
+          <b>06</b> Newspaper classified<em
+            >Three columns, rules, no pictures. Reads like a real notice.</em
+          >
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p07">
+          <img class="img" src="event-cover.jpg" alt="" />
+          <div class="cap">
+            <b>Tall People Meetup Wellington.</b> Launch night, 25 November 2026. Rosie's Red-Hot
+            Cantina, Queens Wharf. All welcome.
+          </div>
+          <div class="title">Tall People Meetup<small>25 NOV - 5 TO 7PM - ROSIE'S</small></div>
+        </div>
+        <figcaption>
+          <b>07</b> Museum caption<em
+            >Almost nothing. The image does the work and the label does the facts.</em
+          >
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p08">
+          <img class="img" src="event-cover.jpg" alt="" />
+          <div class="t">TALL PEOPLE<br />MEETUP<br />WELLINGTON</div>
+          <div class="b"><span>WED 25 NOV - 5 TO 7PM</span><span>ROSIE'S</span></div>
+        </div>
+        <figcaption>
+          <b>08</b> Vinyl sleeve<em>Full-bleed cover, tiny type. The image is the brand.</em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p09">
+          <div class="bar"></div>
+          <div class="k">HOW TO GET THERE</div>
+          <div class="steps">
+            <div class="step">
+              <div class="n">01</div>
+              <div>
+                <div class="big">Wednesday 25 Nov</div>
+                <div class="small">Any time after 5pm</div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="n">02</div>
+              <div>
+                <div class="big">4 Queens Wharf</div>
+                <div class="small">Rosie's Red-Hot Cantina</div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="n">03</div>
+              <div>
+                <div class="big">Find the tall group</div>
+                <div class="small">5pm to 7pm. All welcome.</div>
+              </div>
+            </div>
+          </div>
+          <div class="arrow">&#8594;</div>
+        </div>
+        <figcaption>
+          <b>09</b> Wayfinding<em>Numbered steps, signage sans, one arrow. Pure utility.</em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p10">
+          <div class="k">Tall<br />People<br />Meetup</div>
+          <div class="line"></div>
+          <div class="when">
+            WED 25 NOV<br />5 TO 7PM<br />ROSIE'S RED-HOT CANTINA<br />4 QUEENS WHARF
+          </div>
+          <div class="all">ALL WELCOME</div>
+          <img class="img" src="event-cover.jpg" alt="" />
+        </div>
+        <figcaption>
+          <b>10</b> Chalkboard<em
+            >Dark ground, cream type, a ghosted image. Pub noticeboard energy.</em
+          >
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p11">
+          <div class="dot"></div>
+          <div class="sq"></div>
+          <div class="k">Tall<br />People<br /><span>Meetup</span></div>
+          <div class="when">WED 25 NOV - 5 TO 7PM<br />ROSIE'S, QUEENS WHARF<br />ALL WELCOME</div>
+        </div>
+        <figcaption>
+          <b>11</b> Risograph<em
+            >Two spot inks, overprint, hard shapes. Print room, not design system.</em
+          >
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p12">
+          <div class="plate">PLATE 01 - WELLINGTON</div>
+          <img class="img" src="event-cover.jpg" alt="" />
+          <div class="nm">Tall People Meetup</div>
+          <div class="lat">Homo sapiens, unusually vertical</div>
+          <div class="when">
+            WED 25 NOV, 5 TO 7PM<br />ROSIE'S RED-HOT CANTINA<br />4 QUEENS WHARF - ALL WELCOME
+          </div>
+        </div>
+        <figcaption>
+          <b>12</b> Field guide<em
+            >Sage paper, specimen plate, serif caption. The giraffe becomes a sighting.</em
+          >
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p13">
+          <div class="c"></div>
+          <div class="t"></div>
+          <div class="k">tall people<br /><b>meetup</b><br />wellington</div>
+          <div class="when">25 Nov - 5 to 7pm - Rosie's - All welcome</div>
+        </div>
+        <figcaption>
+          <b>13</b> Bauhaus<em
+            >Circle, triangle, lowercase geometric. Playful, still restrained.</em
+          >
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p14">
+          <img class="img" src="event-cover.jpg" alt="" />
+          <div class="pad">
+            <div class="kick">WELLINGTON - FIRST MEETUP</div>
+            <div class="h">Finally, an event where you aren't the tallest person in the room</div>
+            <div class="deck">
+              Drinks at Rosie's on Queens Wharf, Wednesday 25 November, 5pm to 7pm. Swap notes on
+              long-haul flights and group photos. All welcome.
+            </div>
+            <div class="when">ROSIE'S RED-HOT CANTINA - 4 QUEENS WHARF</div>
+          </div>
+        </div>
+        <figcaption>
+          <b>14</b> Editorial spread<em
+            >Headline, deck, drop cap. Reads like a magazine page, not an ad.</em
+          >
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p15">
+          <div class="org">TALL PEOPLE MEETUP WELLINGTON</div>
+          <div class="memo">MEMORANDUM</div>
+          <table>
+            <tr>
+              <td>TO</td>
+              <td>All tall people, and friends</td>
+            </tr>
+            <tr>
+              <td>FROM</td>
+              <td>The organisers</td>
+            </tr>
+            <tr>
+              <td>RE</td>
+              <td>First meetup</td>
+            </tr>
+            <tr>
+              <td>DATE</td>
+              <td>25 November 2026</td>
+            </tr>
+          </table>
+          <div class="rule"></div>
+          <ul>
+            <li>Venue: Rosie's Red-Hot Cantina, 4 Queens Wharf.</li>
+            <li>Time: 5pm to 7pm. Drop in.</li>
+            <li>Cost: none.</li>
+            <li>Dress: whatever fits.</li>
+            <li>All welcome, tall or not.</li>
+          </ul>
+        </div>
+        <figcaption>
+          <b>15</b> Corporate memo<em
+            >Deadpan. Times New Roman and a bullet list. Funny because it is dry.</em
+          >
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p16">
+          <img class="img" src="event-cover.jpg" alt="" />
+          <div class="halftone"></div>
+          <div class="k">TALL PEOPLE</div>
+          <div class="sub2">MEETUP - WELLINGTON</div>
+          <div class="when">MEETUP<br />WED 25 NOV<br />5-7PM ROSIE'S<br />QUEENS WHARF</div>
+          <div class="all">ALL WELCOME</div>
+        </div>
+        <figcaption>
+          <b>16</b> Zine photocopy<em
+            >Halftone, cut-and-paste baselines, one ink. Cheap on purpose.</em
+          >
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p17">
+          <div class="plate">
+            <div class="k">Tall People<br />Meetup</div>
+            <img class="img" src="event-cover.jpg" alt="" />
+            <div class="when">Wed 25 Nov<br />5 to 7pm<br />Rosie's, Queens Wharf</div>
+            <div class="sm">ALL WELCOME</div>
+          </div>
+          <div class="all">WELLINGTON</div>
+        </div>
+        <figcaption>
+          <b>17</b> Highway signage<em
+            >Warning-plate yellow, heavy rule, black caps. Impossible to miss.</em
+          >
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p18">
+          <div class="word">TALL</div>
+          <img class="img" src="event-cover.jpg" alt="" />
+          <div class="when">
+            PEOPLE MEETUP<br />WED 25 NOV - 5 TO 7PM<br />ROSIE'S - ALL WELCOME
+          </div>
+        </div>
+        <figcaption>
+          <b>18</b> Supergraphic<em
+            >The word is the poster. Small image as proof, not decoration.</em
+          >
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p19">
+          <div class="k">Tall<br />People<br />Meetup</div>
+          <div class="mark"></div>
+          <div class="when">
+            WED 25 NOV<br />5 TO 7PM<br />ROSIE'S RED-HOT CANTINA<br />4 QUEENS WHARF
+          </div>
+          <div class="all">ALL WELCOME</div>
+          <img class="img" src="event-cover.jpg" alt="" />
+        </div>
+        <figcaption>
+          <b>19</b> Night invert<em
+            >Forest ground, cream type, terracotta tick. Same system, after dark.</em
+          >
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p20">
+          <div class="bar">WELLINGTON - FIXTURE 01</div>
+          <div class="round">NEXT MEETUP</div>
+          <div class="row">
+            <span class="d">25</span><span class="t">NOV</span><span class="s">WEDNESDAY</span>
+          </div>
+          <div class="row">
+            <span class="d">5</span><span class="t">TO 7PM</span><span class="s">DROP IN</span>
+          </div>
+          <div class="row">
+            <span class="d">4</span><span class="t">QUEENS WHARF</span
+            ><span class="s">ROSIE'S</span>
+          </div>
+          <div class="note">
+            Tall people, and anyone who likes them. Drink prize for the tallest on the night.
+          </div>
+          <div class="all">ALL WELCOME - NO CHARGE</div>
+        </div>
+        <figcaption>
+          <b>20</b> Sports fixture<em
+            >Results-board grammar. Sets up the basketball, netball, volleyball link.</em
+          >
+        </figcaption>
+      </figure>
+    </div>
+  </body>
+</html>

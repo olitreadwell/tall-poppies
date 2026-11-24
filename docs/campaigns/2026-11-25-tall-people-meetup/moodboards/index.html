@@ -1,0 +1,1761 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tall People Meetup Wellington - twenty eras, v2</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #fff;
+        color: #111;
+        padding: 40px 36px 56px;
+        font:
+          13px/1.35 'Helvetica Neue',
+          Helvetica,
+          Arial,
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1 {
+        font-size: 15px;
+        font-weight: 700;
+      }
+      .sub {
+        color: #6b6b6b;
+        font-size: 12px;
+        margin: 6px 0 28px;
+        max-width: 840px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 360px);
+        gap: 34px 26px;
+      }
+      figure {
+        width: 360px;
+      }
+      .poster {
+        width: 360px;
+        height: 450px;
+        position: relative;
+        overflow: hidden;
+        outline: 1px solid rgba(0, 0, 0, 0.08);
+      }
+      figcaption {
+        margin-top: 9px;
+        font-size: 12px;
+      }
+      figcaption b {
+        font-weight: 700;
+        margin-right: 6px;
+        font-variant-numeric: tabular-nums;
+      }
+      figcaption em {
+        display: block;
+        color: #7a7a7a;
+        font-style: normal;
+        font-size: 11px;
+        margin-top: 2px;
+      }
+      .svg {
+        display: block;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      /* ---------- 01 Victorian playbill 1850 ---------- */
+      .p01 {
+        background: #fff;
+        color: #0a0a0a;
+        padding: 14px 16px;
+        font-family: 'Rockwell Extra Bold', Rockwell, Georgia, serif;
+      }
+      .p01 .rule {
+        border-top: 4px double #0a0a0a;
+        margin: 4px 0;
+      }
+      .p01 .top {
+        font-family: Rockwell, Georgia, serif;
+        font-size: 8px;
+        letter-spacing: 0.3em;
+        text-align: center;
+      }
+      .p01 .h {
+        font-size: 41px;
+        line-height: 0.98;
+        text-align: center;
+        margin: 8px 0 4px;
+        letter-spacing: -0.02em;
+      }
+      .p01 .h span {
+        display: block;
+        font-size: 22px;
+        letter-spacing: 0.06em;
+        line-height: 1.5;
+        margin: 2px 0;
+      }
+      .p01 .sub2 {
+        text-align: center;
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-size: 11px;
+        margin: 4px 0 8px;
+      }
+      .p01 .body {
+        display: flex;
+        gap: 9px;
+        font-family: Georgia, serif;
+        font-size: 9px;
+        line-height: 1.5;
+        text-align: justify;
+        margin-top: 2px;
+      }
+      .p01 .body div {
+        flex: 1;
+      }
+      .p01 .big {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 26px;
+        text-align: center;
+        font-size: 15px;
+        letter-spacing: 0.08em;
+        border-top: 2px solid #0a0a0a;
+        border-bottom: 2px solid #0a0a0a;
+        padding: 5px 0;
+        margin: 0 16px;
+        color: #c8102e;
+      }
+      .p01 .all {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 8px;
+        text-align: center;
+        font-family: Georgia, serif;
+        font-size: 8px;
+        letter-spacing: 0.24em;
+        color: #0a0a0a;
+      }
+
+      /* ---------- 02 Art Nouveau 1900 ---------- */
+      .p02 {
+        background: #0e3b2e;
+        color: #fff;
+        padding: 18px;
+        font-family: Baskerville, Georgia, serif;
+      }
+      .p02 .arch {
+        position: absolute;
+        left: 34px;
+        right: 34px;
+        top: 16px;
+        bottom: 96px;
+        border: 2px solid #f2d06b;
+        border-radius: 170px 170px 0 0;
+        background: #124c3b;
+      }
+      .p02 .arch2 {
+        position: absolute;
+        left: 42px;
+        right: 42px;
+        top: 24px;
+        bottom: 104px;
+        border: 1px solid #f6c7c0;
+        border-radius: 160px 160px 0 0;
+      }
+      .p02 .k {
+        position: relative;
+        text-align: center;
+        margin-top: 56px;
+        font-size: 27px;
+        line-height: 1.05;
+        letter-spacing: 0.04em;
+        color: #fff;
+      }
+      .p02 .k i {
+        display: block;
+        font-size: 13px;
+        letter-spacing: 0.28em;
+        font-style: normal;
+        margin-top: 6px;
+        color: #f2d06b;
+      }
+      .p02 .curl {
+        position: relative;
+        width: 74px;
+        height: 16px;
+        margin: 14px auto;
+        border-top: 2px solid #f6c7c0;
+        border-radius: 50%;
+      }
+      .p02 .when {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 44px;
+        text-align: center;
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        line-height: 1.8;
+        color: #fff;
+      }
+      .p02 .all {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 18px;
+        text-align: center;
+        font-size: 9px;
+        letter-spacing: 0.3em;
+        color: #f2d06b;
+      }
+
+      /* ---------- 03 Constructivist 1920 ---------- */
+      .p03 {
+        background: #0f0f0f;
+        color: #fff;
+      }
+      .p03 .slash {
+        position: absolute;
+        width: 900px;
+        height: 150px;
+        background: #e01b24;
+        transform: rotate(-34deg);
+        left: -240px;
+        top: 150px;
+      }
+      .p03 .k {
+        position: absolute;
+        top: 24px;
+        left: 22px;
+        color: #fff;
+        font-family: Impact, 'Haettenschweiler', sans-serif;
+        font-size: 46px;
+        line-height: 0.88;
+        text-transform: uppercase;
+        width: 220px;
+      }
+      .p03 .when {
+        position: absolute;
+        bottom: 70px;
+        left: 22px;
+        color: #fff;
+        background: #0f0f0f;
+        padding: 6px 8px 6px 0;
+        font-family: 'Courier New', monospace;
+        font-size: 11px;
+        line-height: 1.7;
+        letter-spacing: 0.05em;
+      }
+      .p03 .all {
+        position: absolute;
+        right: 20px;
+        bottom: 24px;
+        color: #fff;
+        background: #e01b24;
+        padding: 4px 7px;
+        font-family: Impact, sans-serif;
+        font-size: 16px;
+        letter-spacing: 0.02em;
+      }
+
+      /* ---------- 04 Bauhaus 1925 ---------- */
+      .p04 {
+        background: #ffd400;
+        padding: 20px;
+        font-family: Futura, 'Century Gothic', 'Helvetica Neue', sans-serif;
+        color: #111;
+      }
+      .p04 .c {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: #e01b24;
+        right: -34px;
+        top: 104px;
+      }
+      .p04 .t {
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 62px solid transparent;
+        border-right: 62px solid transparent;
+        border-bottom: 108px solid #1c4fd8;
+        left: -10px;
+        bottom: 52px;
+      }
+      .p04 .y {
+        position: absolute;
+        width: 78px;
+        height: 78px;
+        border: 9px solid #fff;
+        right: 26px;
+        bottom: 30px;
+      }
+      .p04 .k {
+        position: relative;
+        font-size: 26px;
+        line-height: 1.06;
+        letter-spacing: 0.01em;
+        width: 200px;
+        font-weight: 400;
+      }
+      .p04 .k b {
+        font-weight: 700;
+      }
+      .p04 .when {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        font-size: 9px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        z-index: 2;
+        background: #ffd400;
+        padding: 4px 6px 4px 0;
+      }
+
+      /* ---------- 05 Art Deco 1927 ---------- */
+      .p05 {
+        background: #0a0a0a;
+        color: #fff;
+        padding: 22px 20px;
+        font-family: Copperplate, Didot, Georgia, serif;
+      }
+      .p05 .fan {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -90px;
+        height: 230px;
+        background: repeating-conic-gradient(
+          from 200deg at 50% 0%,
+          #e7c56a 0deg 2deg,
+          transparent 2deg 8deg
+        );
+        opacity: 0.6;
+      }
+      .p05 .k {
+        position: relative;
+        text-align: center;
+        margin-top: 78px;
+        font-size: 30px;
+        line-height: 1.15;
+        letter-spacing: 0.12em;
+      }
+      .p05 .k small {
+        display: block;
+        font-size: 10px;
+        letter-spacing: 0.34em;
+        color: #e7c56a;
+        margin-top: 8px;
+      }
+      .p05 .dbl {
+        margin: 16px auto;
+        width: 150px;
+        border-top: 1px solid #e7c56a;
+        border-bottom: 1px solid #e7c56a;
+        height: 5px;
+      }
+      .p05 .when {
+        text-align: center;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-size: 9.5px;
+        letter-spacing: 0.22em;
+        line-height: 2;
+        color: #fff;
+      }
+      .p05 .all {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 16px;
+        text-align: center;
+        font-size: 8.5px;
+        letter-spacing: 0.4em;
+      }
+      .p05 .all span {
+        background: #1fa37a;
+        color: #0a0a0a;
+        padding: 4px 9px;
+      }
+
+      /* ---------- 06 Swiss 1955 ---------- */
+      .p06 {
+        background: #fff;
+        padding: 26px 24px;
+        color: #111;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+      .p06 .k {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 0.96;
+        letter-spacing: -0.035em;
+      }
+      .p06 .yr {
+        position: absolute;
+        top: 26px;
+        right: 24px;
+        font-size: 10px;
+        letter-spacing: 0.1em;
+      }
+      .p06 hr {
+        border: 0;
+        border-top: 8px solid #e30613;
+        margin: 18px 0 14px;
+      }
+      .p06 .date {
+        font-size: 60px;
+        line-height: 0.82;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+      }
+      .p06 .date span {
+        display: block;
+        font-size: 20px;
+        letter-spacing: -0.01em;
+        margin-top: 6px;
+      }
+      .p06 .det {
+        position: absolute;
+        left: 24px;
+        bottom: 50px;
+        font-size: 12px;
+        line-height: 1.6;
+        max-width: 210px;
+      }
+      .p06 .foot {
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        bottom: 20px;
+        font-size: 9px;
+        letter-spacing: 0.14em;
+        border-top: 1px solid #111;
+        padding-top: 6px;
+      }
+
+      /* ---------- 07 Mid-century travel 1958 ---------- */
+      .p07 {
+        background: #0b4fa8;
+        font-family: Futura, 'Gill Sans', 'Helvetica Neue', sans-serif;
+        color: #fff;
+      }
+      .p07 .sun {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: #ffc93c;
+        right: 26px;
+        top: 30px;
+      }
+      .p07 .hill1 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 96px;
+        height: 120px;
+        background: #083e86;
+        border-radius: 50% 50% 0 0/40% 40% 0 0;
+      }
+      .p07 .hill2 {
+        position: absolute;
+        left: -40px;
+        right: -40px;
+        bottom: 56px;
+        height: 110px;
+        background: #052e63;
+        border-radius: 50% 50% 0 0/40% 40% 0 0;
+      }
+      .p07 .sand {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 58px;
+        background: #ff6b4a;
+      }
+      .p07 .k {
+        position: relative;
+        padding: 26px 22px;
+        font-size: 27px;
+        line-height: 1.02;
+        letter-spacing: 0.06em;
+      }
+      .p07 .k b {
+        display: block;
+        font-weight: 700;
+        color: #ffc93c;
+      }
+      .p07 .when {
+        position: absolute;
+        left: 22px;
+        top: 104px;
+        font-size: 9.5px;
+        letter-spacing: 0.16em;
+        line-height: 1.9;
+      }
+      .p07 .all {
+        position: absolute;
+        right: 22px;
+        bottom: 16px;
+        font-size: 9px;
+        letter-spacing: 0.2em;
+        color: #0b1b33;
+      }
+
+      /* ---------- 08 Pop art 1963 ---------- */
+      .p08 {
+        background: #fff;
+        color: #000;
+        font-family: Impact, 'Haettenschweiler', sans-serif;
+      }
+      .p08 .dots {
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(#00b8e6 1.7px, transparent 1.8px);
+        background-size: 7px 7px;
+        opacity: 0.65;
+      }
+      .p08 .bubble {
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        top: 20px;
+        height: 250px;
+        background: #ffd400;
+        border: 5px solid #000;
+        border-radius: 14px;
+      }
+      .p08 .bubble:after {
+        content: '';
+        position: absolute;
+        left: 44px;
+        bottom: -34px;
+        width: 0;
+        height: 0;
+        border-left: 26px solid transparent;
+        border-top: 34px solid #000;
+      }
+      .p08 .k {
+        position: relative;
+        padding: 26px 24px;
+        font-size: 30px;
+        line-height: 0.95;
+        text-transform: uppercase;
+        color: #000;
+      }
+      .p08 .k span {
+        color: #c4005f;
+      }
+      .p08 .when {
+        position: absolute;
+        left: 22px;
+        bottom: 22px;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 1.6;
+        background: #ff2e93;
+        color: #000;
+        padding: 8px 10px;
+        transform: rotate(-2deg);
+      }
+      .p08 .all {
+        position: absolute;
+        right: 18px;
+        bottom: 26px;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 11px;
+        border: 3px solid #000;
+        padding: 5px 7px;
+        transform: rotate(2deg);
+      }
+
+      /* ---------- 09 Polish film poster 1965 ---------- */
+      .p09 {
+        background: #5c1a1b;
+        padding: 22px;
+        font-family: 'Hoefler Text', Georgia, serif;
+        color: #f5f5f0;
+      }
+      .p09 .shape {
+        position: absolute;
+        left: 70px;
+        top: 70px;
+        width: 170px;
+        height: 190px;
+        background: #e0a33e;
+        border-radius: 50% 50% 44% 44%;
+      }
+      .p09 .shape:after {
+        content: '';
+        position: absolute;
+        left: 52px;
+        top: -52px;
+        width: 66px;
+        height: 66px;
+        border-radius: 50%;
+        background: #f5f5f0;
+      }
+      .p09 .k {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 112px;
+        text-align: center;
+        font-style: italic;
+        font-size: 22px;
+      }
+      .p09 .when {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 44px;
+        text-align: center;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-size: 9px;
+        letter-spacing: 0.2em;
+        line-height: 2;
+        color: #f5f5f0;
+      }
+      .p09 .all {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 18px;
+        text-align: center;
+        font-size: 8px;
+        letter-spacing: 0.34em;
+        color: #e0a33e;
+      }
+
+      /* ---------- 10 Psychedelic 1967 ---------- */
+      .p10 {
+        background: #1b0b2e;
+        font-family: Georgia, 'Times New Roman', serif;
+        color: #fff;
+      }
+      .p10 .b1 {
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background: #ff4fa3;
+        right: -60px;
+        top: -60px;
+      }
+      .p10 .b2 {
+        position: absolute;
+        width: 190px;
+        height: 190px;
+        border-radius: 46% 54% 60% 40%/50% 44% 56% 50%;
+        background: #ffc93c;
+        left: -50px;
+        top: 130px;
+      }
+      .p10 .b3 {
+        position: absolute;
+        width: 230px;
+        height: 150px;
+        border-radius: 50%;
+        background: #38d66b;
+        left: 80px;
+        bottom: -46px;
+      }
+      .p10 .k {
+        position: relative;
+        padding: 26px 22px;
+        font-weight: 700;
+        font-size: 27px;
+        line-height: 1;
+        transform: rotate(-3deg);
+        width: 230px;
+        color: #fff;
+      }
+      .p10 .k i {
+        display: block;
+        font-style: normal;
+        color: #ffc93c;
+        transform: rotate(2deg);
+        margin-top: 2px;
+      }
+      .p10 .when {
+        position: absolute;
+        right: 18px;
+        bottom: 86px;
+        text-align: right;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 9.5px;
+        letter-spacing: 0.12em;
+        line-height: 1.9;
+        background: #1b0b2e;
+        padding: 6px 8px;
+        transform: rotate(2deg);
+      }
+      .p10 .all {
+        position: absolute;
+        left: 22px;
+        bottom: 26px;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 9px;
+        letter-spacing: 0.16em;
+        color: #0b0410;
+        background: #38d66b;
+        padding: 4px 7px;
+        transform: rotate(-2deg);
+      }
+
+      /* ---------- 11 Funk 1973 ---------- */
+      .p11 {
+        background: #2a1208;
+        color: #fff;
+        font-family: Rockwell, 'Bookman Old Style', Georgia, serif;
+      }
+      .p11 .band {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 180px;
+        background: #ff7a1a;
+      }
+      .p11 .band2 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 180px;
+        height: 14px;
+        background: #ffc93c;
+      }
+      .p11 .k {
+        position: relative;
+        padding: 24px 20px;
+        font-size: 34px;
+        line-height: 0.92;
+        letter-spacing: -0.01em;
+        color: #2a1208;
+      }
+      .p11 .k span {
+        display: block;
+        color: #2a1208;
+      }
+      .p11 .when {
+        position: absolute;
+        left: 20px;
+        bottom: 74px;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 1.8;
+        color: #fff;
+      }
+      .p11 .all {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 22px;
+        border-top: 3px solid #ffc93c;
+        padding-top: 6px;
+        font-size: 10px;
+        letter-spacing: 0.24em;
+        font-weight: 700;
+        color: #ffc93c;
+      }
+
+      /* ---------- 12 Punk 1979 ---------- */
+      .p12 {
+        background: #000;
+        padding: 16px;
+        color: #fff;
+        font-family: 'Arial Black', Impact, sans-serif;
+      }
+      .p12 .cut {
+        position: relative;
+        height: 196px;
+      }
+      .p12 .w {
+        position: absolute;
+        background: #fff;
+        color: #000;
+        padding: 1px 5px;
+        font-size: 29px;
+        line-height: 1;
+        transform: rotate(-4deg);
+      }
+      .p12 .w:nth-child(1) {
+        left: 0;
+        top: 0;
+        background: #ff1f1f;
+        color: #000;
+        transform: rotate(3deg);
+      }
+      .p12 .w:nth-child(2) {
+        left: 104px;
+        top: 8px;
+        transform: rotate(-6deg);
+      }
+      .p12 .w:nth-child(3) {
+        left: 10px;
+        top: 62px;
+        transform: rotate(2deg);
+      }
+      .p12 .w:nth-child(4) {
+        left: 126px;
+        top: 68px;
+        background: #000;
+        color: #fff;
+        border: 2px solid #fff;
+        transform: rotate(-3deg);
+      }
+      .p12 .w:nth-child(5) {
+        left: 4px;
+        top: 124px;
+        transform: rotate(-2deg);
+      }
+      .p12 .stripe {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 250px;
+        height: 8px;
+        background: #ff1f1f;
+        transform: rotate(-3deg);
+      }
+      .p12 .when {
+        position: absolute;
+        left: 16px;
+        bottom: 52px;
+        font-family: 'Courier New', monospace;
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 1.9;
+        background: #fff;
+        color: #000;
+        padding: 6px 8px;
+        transform: rotate(-2deg);
+      }
+      .p12 .all {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        font-family: 'Courier New', monospace;
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        color: #ff1f1f;
+      }
+
+      /* ---------- 13 Memphis 1984 ---------- */
+      .p13 {
+        background: #ffd6e8;
+        padding: 20px;
+        font-family: Futura, 'Century Gothic', 'Helvetica Neue', sans-serif;
+        color: #000;
+      }
+      .p13 .sq {
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        background: #00c2cb;
+        right: -30px;
+        top: 60px;
+        transform: rotate(18deg);
+      }
+      .p13 .dot {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #ffe94a;
+        left: -12px;
+        bottom: 120px;
+      }
+      .p13 .zig {
+        position: absolute;
+        left: 160px;
+        bottom: 26px;
+        width: 200px;
+        height: 8px;
+        background: #000;
+        transform: rotate(-12deg);
+      }
+      .p13 .k {
+        position: relative;
+        font-size: 27px;
+        line-height: 1.04;
+        letter-spacing: 0.02em;
+        font-weight: 700;
+        width: 200px;
+      }
+      .p13 .k span {
+        color: #00575d;
+      }
+      .p13 .when {
+        position: absolute;
+        left: 20px;
+        bottom: 100px;
+        font-size: 10px;
+        letter-spacing: 0.06em;
+        line-height: 1.9;
+        font-weight: 700;
+      }
+      .p13 .all {
+        position: absolute;
+        left: 20px;
+        bottom: 62px;
+        font-size: 9px;
+        letter-spacing: 0.22em;
+        background: #000;
+        color: #ffd6e8;
+        padding: 3px 6px;
+      }
+
+      /* ---------- 14 Corporate brochure 1986 ---------- */
+      .p14 {
+        background: #0b2a5b;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        color: #fff;
+      }
+      .p14 .top {
+        background: #2bb3c0;
+        color: #0b2a5b;
+        padding: 12px 18px;
+        font-size: 9px;
+        letter-spacing: 0.26em;
+        font-weight: 700;
+      }
+      .p14 .k {
+        padding: 20px 18px 0;
+        font-size: 25px;
+        line-height: 1.1;
+        font-weight: 300;
+        letter-spacing: 0.01em;
+      }
+      .p14 .k b {
+        font-weight: 700;
+        display: block;
+      }
+      .p14 .rule {
+        height: 12px;
+        background: #2bb3c0;
+        margin: 16px 18px 0;
+      }
+      .p14 .grid {
+        display: block;
+        margin: 14px 18px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.6);
+      }
+      .p14 .r {
+        display: grid;
+        grid-template-columns: 76px 18px 1fr;
+        gap: 6px;
+        align-items: center;
+        padding: 7px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+        font-size: 8px;
+        letter-spacing: 0.1em;
+      }
+      .p14 .r span:last-child {
+        text-align: right;
+        font-size: 8px;
+        letter-spacing: 0.04em;
+      }
+      .p14 .r .svg {
+        width: 12px;
+        height: 12px;
+        stroke-width: 2;
+      }
+      .p14 .all {
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        bottom: 16px;
+        font-size: 8.5px;
+        letter-spacing: 0.2em;
+        color: #2bb3c0;
+        border-top: 1px solid #2bb3c0;
+        padding-top: 5px;
+      }
+
+      /* ---------- 15 Surf rad 1991 ---------- */
+      .p15 {
+        background: #ff2d87;
+        font-family: Impact, 'Haettenschweiler', sans-serif;
+        color: #0a0a0a;
+      }
+      .p15 .sky {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 290px;
+        background: #00d4ff;
+      }
+      .p15 .sun {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: #ffe94a;
+        left: 26px;
+        top: 40px;
+        background-image: repeating-linear-gradient(0deg, #00d4ff 0 4px, transparent 4px 19px);
+      }
+      .p15 .k {
+        position: relative;
+        padding: 22px 18px;
+        font-size: 40px;
+        line-height: 0.86;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        transform: rotate(-3deg);
+      }
+      .p15 .k span {
+        background: #0a0a0a;
+        color: #ffe94a;
+        padding: 0 8px 2px;
+        display: inline-block;
+      }
+      .p15 .when {
+        position: absolute;
+        left: 18px;
+        bottom: 62px;
+        font-family: 'Arial Black', sans-serif;
+        font-size: 12px;
+        line-height: 1.6;
+        background: #0a0a0a;
+        color: #ffe94a;
+        padding: 6px 9px;
+        transform: rotate(-2deg);
+      }
+      .p15 .all {
+        position: absolute;
+        right: 16px;
+        bottom: 18px;
+        font-family: 'Arial Black', sans-serif;
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        color: #0a0a0a;
+        background: #ffe94a;
+        padding: 3px 6px;
+      }
+
+      /* ---------- 16 Rave flyer 1992 ---------- */
+      .p16 {
+        background: #000;
+        padding: 14px;
+        color: #fff;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+      }
+      .p16 .rep {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 6px;
+        font-size: 8px;
+        letter-spacing: 0.32em;
+        color: #00f0ff;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .p16 .k {
+        position: relative;
+        margin-top: 26px;
+        font-size: 39px;
+        line-height: 0.84;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+        color: #fff;
+      }
+      .p16 .k span {
+        color: #ff00c8;
+      }
+      .p16 .when {
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        font-family: 'Courier New', monospace;
+        font-size: 9px;
+        line-height: 1.75;
+        letter-spacing: 0.06em;
+        color: #00f0ff;
+        border-top: 1px solid #ff00c8;
+        padding-top: 6px;
+      }
+      .p16 .big {
+        position: absolute;
+        right: 14px;
+        top: 150px;
+        font-size: 11px;
+        letter-spacing: 0.3em;
+        color: #ff00c8;
+        writing-mode: vertical-rl;
+      }
+      .p16 .all {
+        position: absolute;
+        left: 14px;
+        bottom: 96px;
+        font-size: 9px;
+        letter-spacing: 0.24em;
+        color: #000;
+        background: #00f0ff;
+        padding: 3px 5px;
+        font-weight: 700;
+      }
+      .p16 .icon {
+        position: absolute;
+        right: 16px;
+        top: 26px;
+        width: 26px;
+        height: 26px;
+        color: #00f0ff;
+      }
+      .p16 .icon .svg {
+        width: 26px;
+        height: 26px;
+      }
+
+      /* ---------- 17 Grunge 1993 ---------- */
+      .p17 {
+        background: #000;
+        padding: 16px;
+        font-family: Impact, 'Haettenschweiler', sans-serif;
+        color: #fff;
+      }
+      .p17 .noise {
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.28) 1px, transparent 1px);
+        background-size: 3px 3px;
+        opacity: 0.35;
+      }
+      .p17 .k {
+        position: relative;
+        font-size: 46px;
+        line-height: 0.84;
+        letter-spacing: -0.01em;
+        text-transform: uppercase;
+        color: #fff;
+      }
+      .p17 .k span {
+        display: inline-block;
+        background: #c05621;
+        color: #fff;
+        padding: 0 3px;
+      }
+      .p17 .smudge {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 120px;
+        height: 52px;
+        background: #c05621;
+        transform: rotate(-2deg);
+        opacity: 0.9;
+      }
+      .p17 .when {
+        position: absolute;
+        left: 16px;
+        bottom: 38px;
+        font-family: 'Courier New', monospace;
+        font-weight: 700;
+        font-size: 10.5px;
+        line-height: 1.85;
+        color: #fff;
+        background: #000;
+        padding: 4px 6px;
+      }
+      .p17 .all {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        font-family: 'Courier New', monospace;
+        font-size: 9px;
+        letter-spacing: 0.2em;
+        color: #c05621;
+      }
+
+      /* ---------- 18 Y2K chrome 1999 ---------- */
+      .p18 {
+        background: #dce6f2;
+        padding: 18px;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        color: #1b2e4b;
+      }
+      .p18 .orb {
+        position: absolute;
+        width: 230px;
+        height: 230px;
+        border-radius: 50%;
+        right: -50px;
+        top: -40px;
+        background: radial-gradient(circle at 32% 28%, #fff, #bfd3ec 55%, #8fa6c4);
+      }
+      .p18 .k {
+        position: relative;
+        font-size: 35px;
+        font-weight: 700;
+        line-height: 0.92;
+        letter-spacing: -0.03em;
+        background: linear-gradient(#fdfeff 8%, #5e7fa8 46%, #ffffff 52%, #2f4c73 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-stroke: 0.6px rgba(18, 35, 63, 0.45);
+        filter: drop-shadow(0 1px 0 #fff);
+      }
+      .p18 .pill {
+        position: absolute;
+        left: 18px;
+        bottom: 86px;
+        background: #1e3fa8;
+        color: #fff;
+        font-size: 10px;
+        letter-spacing: 0.06em;
+        padding: 6px 12px;
+        border-radius: 14px;
+      }
+      .p18 .when {
+        position: absolute;
+        left: 18px;
+        bottom: 30px;
+        font-size: 9.5px;
+        line-height: 1.85;
+        letter-spacing: 0.05em;
+        color: #1b2e4b;
+      }
+      .p18 .all {
+        position: absolute;
+        right: 18px;
+        bottom: 30px;
+        font-size: 9px;
+        letter-spacing: 0.18em;
+        color: #1e3fa8;
+      }
+
+      /* ---------- 19 Frutiger Aero 2007 ---------- */
+      .p19 {
+        background: linear-gradient(#5cc8f2 0%, #8edff0 55%, #b9f0da 100%);
+        padding: 20px;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        color: #0a3a4a;
+      }
+      .p19 .bub {
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle at 30% 28%,
+          rgba(255, 255, 255, 0.95),
+          rgba(255, 255, 255, 0.15) 60%,
+          rgba(120, 200, 220, 0.35)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.8);
+      }
+      .p19 .b1 {
+        width: 110px;
+        height: 110px;
+        right: 22px;
+        top: 36px;
+      }
+      .p19 .b2 {
+        width: 52px;
+        height: 52px;
+        right: 120px;
+        top: 150px;
+      }
+      .p19 .b3 {
+        width: 74px;
+        height: 74px;
+        left: -18px;
+        bottom: 110px;
+      }
+      .p19 .gloss {
+        position: absolute;
+        left: 26px;
+        right: 26px;
+        top: 26px;
+        height: 150px;
+        border-radius: 18px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.25));
+        border: 1px solid rgba(255, 255, 255, 0.9);
+      }
+      .p19 .k {
+        position: relative;
+        padding: 44px 22px 0;
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: -0.01em;
+        color: #0a3a4a;
+      }
+      .p19 .when {
+        position: absolute;
+        left: 20px;
+        bottom: 62px;
+        font-size: 10px;
+        line-height: 1.9;
+        letter-spacing: 0.04em;
+        color: #0a3a4a;
+      }
+      .p19 .all {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        font-size: 9px;
+        letter-spacing: 0.16em;
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 10px;
+        padding: 6px 8px;
+        text-align: center;
+        color: #0a3a4a;
+      }
+
+      /* ---------- 20 Cyberpunk 2020 ---------- */
+      .p20 {
+        background: #050505;
+        padding: 18px;
+        font-family: 'Courier New', monospace;
+        color: #ffb000;
+      }
+      .p20 .scan {
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(
+          0deg,
+          rgba(255, 176, 0, 0.1) 0 1px,
+          transparent 1px 3px
+        );
+      }
+      .p20 .k {
+        position: relative;
+        font-size: 27px;
+        font-weight: 700;
+        line-height: 0.95;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        color: #ffb000;
+        text-shadow: 0 0 8px rgba(255, 176, 0, 0.55);
+      }
+      .p20 .k span {
+        color: #00e5c0;
+        text-shadow: 0 0 8px rgba(0, 229, 192, 0.5);
+      }
+      .p20 .warn {
+        position: relative;
+        margin-top: 12px;
+        border: 1px solid #ffb000;
+        padding: 4px 6px;
+        font-size: 8px;
+        letter-spacing: 0.22em;
+        display: inline-block;
+      }
+      .p20 .when {
+        position: absolute;
+        left: 18px;
+        bottom: 56px;
+        font-size: 9.5px;
+        line-height: 1.9;
+        letter-spacing: 0.06em;
+        color: #ffb000;
+      }
+      .p20 .barcode {
+        position: absolute;
+        right: 18px;
+        bottom: 54px;
+        width: 64px;
+        height: 34px;
+        background: repeating-linear-gradient(90deg, #ffb000 0 2px, transparent 2px 5px);
+      }
+      .p20 .icon {
+        position: absolute;
+        right: 18px;
+        top: 18px;
+        color: #00e5c0;
+      }
+      .p20 .icon .svg {
+        width: 20px;
+        height: 20px;
+      }
+      .p20 .all {
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+        font-size: 8px;
+        letter-spacing: 0.28em;
+        color: #00e5c0;
+        border-top: 1px solid #00e5c0;
+        padding-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tall People Meetup Wellington - twenty eras</h1>
+    <p class="sub">
+      Same event, twenty different design languages from 1850 to 2020. Separate palettes, type and
+      composition. Every text and background pair is checked against WCAG 2.2 AA. No beige.
+    </p>
+    <div class="grid">
+      <figure>
+        <div class="poster p01">
+          <div class="rule"></div>
+          <div class="top">GRAND NOTICE - WELLINGTON</div>
+          <div class="rule"></div>
+          <div class="h">TALL<span>PEOPLE</span>MEETUP</div>
+          <div class="sub2">Being the first gathering of the vertically gifted</div>
+          <div class="rule"></div>
+          <div class="body">
+            <div>
+              Wednesday the twenty-fifth of November, from five until eight in the evening. Rosie's
+              Red-Hot Cantina, number four Queens Wharf.
+            </div>
+            <div>
+              Admission free to all persons. No membership required. Short friends, partners and
+              admirers of legroom are welcome.
+            </div>
+          </div>
+          <div class="big">NO DUCKING REQUIRED</div>
+          <div class="all">ALL WELCOME</div>
+        </div>
+        <figcaption>
+          <b>01</b> Victorian playbill<em>1850. Wood type, white stock, one red line.</em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p02">
+          <div class="arch"></div>
+          <div class="arch2"></div>
+          <div class="k">Tall People<br />Meetup<i>WELLINGTON</i></div>
+          <div class="curl"></div>
+          <div class="when">WEDNESDAY 25 NOV<br />FIVE TO EIGHT<br />ROSIE'S - QUEENS WHARF</div>
+          <div class="all">ALL WELCOME</div>
+        </div>
+        <figcaption>
+          <b>02</b> Art Nouveau<em>1900. Deep green, gold, blush. Arch and hairline.</em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p03">
+          <div class="slash"></div>
+          <div class="k">Tall<br />People<br />Meetup<br />Wgtn</div>
+          <div class="when">WED 25 NOV<br />5 TO 8PM<br />ROSIE'S, QUEENS WHARF</div>
+          <div class="all">ALL WELCOME</div>
+        </div>
+        <figcaption>
+          <b>03</b> Constructivist<em>1920. Red on black, one diagonal, no ornament.</em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p04">
+          <div class="c"></div>
+          <div class="t"></div>
+          <div class="y"></div>
+          <div class="k">tall people<br /><b>meetup</b><br />wellington</div>
+          <div class="when">25 Nov - 5 to 8pm - Rosie's - All welcome</div>
+        </div>
+        <figcaption>
+          <b>04</b> Bauhaus<em>1925. Yellow field, primary shapes, lowercase.</em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p05">
+          <div class="fan"></div>
+          <div class="k">TALL PEOPLE MEETUP<small>WELLINGTON</small></div>
+          <div class="dbl"></div>
+          <div class="when">
+            WEDNESDAY 25 NOVEMBER<br />FIVE TO EIGHT<br />ROSIE'S RED-HOT CANTINA<br />4 QUEENS
+            WHARF
+          </div>
+          <div class="all"><span>ALL WELCOME</span></div>
+        </div>
+        <figcaption>
+          <b>05</b> Art Deco<em>1927. Gold on black, fan rays, emerald seal.</em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p06">
+          <div class="k">Tall People<br />Meetup<br />Wellington</div>
+          <div class="yr">LAUNCH / 2026</div>
+          <hr />
+          <div class="date">25<span>NOV</span></div>
+          <div class="det">
+            <b>Wednesday, 5 to 8pm</b><br />Rosie's Red-Hot Cantina<br />4 Queens Wharf<br />All
+            welcome
+          </div>
+          <div class="foot">FIRST MEETUP - WELLINGTON</div>
+        </div>
+        <figcaption>
+          <b>06</b> Swiss Style<em>1955. White, Helvetica, one red bar, strict grid.</em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p07">
+          <div class="sun"></div>
+          <div class="hill1"></div>
+          <div class="hill2"></div>
+          <div class="sand"></div>
+          <div class="k"><b>TALL PEOPLE</b>MEETUP</div>
+          <div class="when">WED 25 NOV<br />5 TO 8PM<br />ROSIE'S<br />QUEENS WHARF</div>
+          <div class="all">ALL WELCOME</div>
+        </div>
+        <figcaption>
+          <b>07</b> Mid-century travel<em>1958. Cobalt, coral, sunflower. Flat litho.</em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p08">
+          <div class="dots"></div>
+          <div class="bubble">
+            <div class="k">TALL PEOPLE <span>MEETUP</span></div>
+          </div>
+          <div class="when">WED 25 NOV - 5 TO 8PM<br />ROSIE'S - QUEENS WHARF</div>
+          <div class="all">ALL WELCOME</div>
+        </div>
+        <figcaption>
+          <b>08</b> Pop Art<em>1963. Ben-Day dots, speech bubble, cyan and magenta.</em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p09">
+          <div class="shape"></div>
+          <div class="k">Tall People<br />Meetup</div>
+          <div class="when">WEDNESDAY 25 NOV<br />5 TO 8PM<br />ROSIE'S, QUEENS WHARF</div>
+          <div class="all">ALL WELCOME</div>
+        </div>
+        <figcaption>
+          <b>09</b> Polish film poster<em>1965. Burgundy and mustard, one surreal form.</em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p10">
+          <div class="b1"></div>
+          <div class="b2"></div>
+          <div class="b3"></div>
+          <div class="k">Tall People <i>Meetup</i></div>
+          <div class="when">WED 25 NOV<br />5-8PM<br />ROSIE'S<br />QUEENS WHARF</div>
+          <div class="all">ALL WELCOME</div>
+        </div>
+        <figcaption>
+          <b>10</b> Psychedelic<em>1967. Deep purple, pink, yellow, green. Tilted.</em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p11">
+          <div class="band"></div>
+          <div class="band2"></div>
+          <div class="k">Tall<br />People<br /><span>Meetup</span></div>
+          <div class="when">
+            WED 25 NOV<br />5 TO 8PM<br />ROSIE'S RED-HOT CANTINA<br />4 QUEENS WHARF
+          </div>
+          <div class="all">ALL WELCOME</div>
+        </div>
+        <figcaption><b>11</b> Funk<em>1973. Orange band on near-black, gold rules.</em></figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p12">
+          <div class="cut">
+            <div class="w">TALL</div>
+            <div class="w">PEOPLE</div>
+            <div class="w">MEET</div>
+            <div class="w">UP</div>
+            <div class="w">WLG</div>
+          </div>
+          <div class="stripe"></div>
+          <div class="when">WED 25 NOV<br />5-8PM<br />ROSIE'S<br />QUEENS WHARF</div>
+          <div class="all">ALL WELCOME</div>
+        </div>
+        <figcaption>
+          <b>12</b> Punk zine<em>1979. Ransom letters, black and red, no grid.</em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p13">
+          <div class="sq"></div>
+          <div class="dot"></div>
+          <div class="zig"></div>
+          <div class="k">Tall <span>People</span> Meetup</div>
+          <div class="when">WED 25 NOV<br />5 TO 8PM<br />ROSIE'S, QUEENS WHARF</div>
+          <div class="all">ALL WELCOME</div>
+        </div>
+        <figcaption>
+          <b>13</b> Memphis<em>1984. Pink field, teal block, zigzag, deliberate clash.</em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p14">
+          <div class="top">TALL PEOPLE MEETUP WELLINGTON</div>
+          <div class="k">A social evening for<br /><b>people who fit</b></div>
+          <div class="rule"></div>
+          <div class="grid">
+            <div class="r">
+              <svg class="svg" viewBox="0 0 24 24">
+                <path d="M8 2v4" />
+                <path d="M16 2v4" />
+                <path d="M3 10h18" />
+                <rect width="18" height="18" x="3" y="4" rx="2" /></svg
+              ><span>DATE</span><span>WED 25 NOV 2026</span>
+            </div>
+            <div class="r">
+              <svg class="svg" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" /></svg
+              ><span>TIME</span><span>17:00 - 20:00</span>
+            </div>
+            <div class="r">
+              <svg class="svg" viewBox="0 0 24 24">
+                <path
+                  d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+                />
+                <circle cx="12" cy="10" r="3" /></svg
+              ><span>VENUE</span><span>ROSIE'S RED-HOT CANTINA</span>
+            </div>
+            <div class="r">
+              <svg class="svg" viewBox="0 0 24 24">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" /></svg
+              ><span>ADDRESS</span><span>4 QUEENS WHARF</span>
+            </div>
+          </div>
+          <div class="all">ALL WELCOME</div>
+        </div>
+        <figcaption>
+          <b>14</b> Corporate brochure<em>1986. Navy, teal rules, icon rows, a data table.</em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p15">
+          <div class="sky"></div>
+          <div class="sun"></div>
+          <div class="k">Tall<br /><span>People</span><br />Meetup</div>
+          <div class="when">WED 25 NOV - 5 TO 8PM<br />ROSIE'S, QUEENS WHARF</div>
+          <div class="all">ALL WELCOME</div>
+        </div>
+        <figcaption>
+          <b>15</b> Surf rad<em>1991. Hot pink, cyan sky, striped sun, Impact.</em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p16">
+          <div class="rep">TALL PEOPLE MEETUP WELLINGTON TALL PEOPLE MEETUP WELLINGTON</div>
+          <div class="k">Tall<br />People<br /><span>Meetup</span></div>
+          <div class="big">WELLINGTON</div>
+          <div class="icon">
+            <svg class="svg" viewBox="0 0 24 24">
+              <path
+                d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"
+              />
+              <path d="M16 9a5 5 0 0 1 0 6" />
+              <path d="M19.364 18.364a9 9 0 0 0 0-12.728" />
+            </svg>
+          </div>
+          <div class="all">ALL WELCOME</div>
+          <div class="when">
+            WED 25 NOV 2026<br />5PM TO 7PM<br />ROSIE'S RED-HOT CANTINA<br />4 QUEENS WHARF
+          </div>
+        </div>
+        <figcaption>
+          <b>16</b> Rave flyer<em>1992. Black, cyan, magenta, repetition, a speaker.</em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p17">
+          <div class="noise"></div>
+          <div class="k">Tall <span>People</span><br />Meetup</div>
+          <div class="smudge"></div>
+          <div class="when">WED 25 NOV<br />5 TO 8PM<br />ROSIE'S<br />4 QUEENS WHARF</div>
+          <div class="all">ALL WELCOME</div>
+        </div>
+        <figcaption>
+          <b>17</b> Grunge<em>1993. Black and rust, xerox grit, off baselines.</em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p18">
+          <div class="orb"></div>
+          <div class="k">Tall<br />People<br />Meetup</div>
+          <div class="pill">WELLINGTON - 2026</div>
+          <div class="when">
+            WED 25 NOV<br />5 TO 8PM<br />ROSIE'S RED-HOT CANTINA<br />4 QUEENS WHARF
+          </div>
+          <div class="all">ALL WELCOME</div>
+        </div>
+        <figcaption>
+          <b>18</b> Y2K chrome<em>1999. Silver gradient, bubbles, pills, blue.</em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p19">
+          <div class="gloss"></div>
+          <div class="bub b1"></div>
+          <div class="bub b2"></div>
+          <div class="bub b3"></div>
+          <div class="k">Tall People<br />Meetup<br />Wellington</div>
+          <div class="when">
+            WED 25 NOV<br />5 TO 8PM<br />ROSIE'S RED-HOT CANTINA<br />4 QUEENS WHARF
+          </div>
+          <div class="all">ALL WELCOME</div>
+        </div>
+        <figcaption>
+          <b>19</b> Frutiger Aero<em>2007. Sky gradient, gloss, bubbles, aqua.</em>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="poster p20">
+          <div class="scan"></div>
+          <div class="icon">
+            <svg class="svg" viewBox="0 0 24 24">
+              <path d="M12 20h.01" />
+              <path d="M2 8.82a15 15 0 0 1 20 0" />
+              <path d="M5 12.859a10 10 0 0 1 14 0" />
+              <path d="M8.5 16.429a5 5 0 0 1 7 0" />
+            </svg>
+          </div>
+          <div class="k">Tall People<br /><span>Meetup</span><br />Wgtn</div>
+          <div class="warn">SECTOR 04 - QUEENS WHARF</div>
+          <div class="when">WED 25 NOV 2026<br />17:00 - 20:00<br />ROSIE'S RED-HOT CANTINA</div>
+          <div class="barcode"></div>
+          <div class="all">ALL WELCOME</div>
+        </div>
+        <figcaption>
+          <b>20</b> Cyberpunk<em>2020. Amber CRT, teal, scanlines, terminal type.</em>
+        </figcaption>
+      </figure>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>03-story</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;700&family=Orbitron:wght@400;700;900&family=Michroma&family=Bangers&family=Archivo+Black&family=Jost:wght@400;600;800&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#222}
+body{display:flex;justify-content:center}
+.post{width:1080px;overflow:hidden;position:relative;background:#fff}
+.post.feed{height:1350px}
+.post.story{height:1920px}
+img{display:block}
+.kicker{font-family:'Space Mono',monospace;letter-spacing:.18em;text-transform:uppercase}
+
+.pop{font-family:'Space Grotesk',sans-serif;color:#000;background:#fff}
+.pop h1,.pop h2{font-family:'Bangers',sans-serif;font-weight:400;letter-spacing:.02em;line-height:.9}
+.pop .heavy{font-family:'Archivo Black',sans-serif}
+.p1{background:#fff url('../../patterns/pop-art/halftone.svg');background-size:220px}
+.p1 .panel{margin:54px 54px 0;border:10px solid #000;height:620px;overflow:hidden}
+.p1 .panel img{width:100%;height:100%;object-fit:cover}
+.p1 .bubble{position:absolute;left:70px;top:520px;width:760px}
+.p1 .bubble span{position:absolute;left:82px;right:82px;top:70px;font-family:'Bangers',sans-serif;font-size:74px;line-height:.94;text-align:center}
+.p1 .details{position:absolute;left:54px;right:54px;top:970px;background:#000;color:#fff;padding:28px 34px}
+.p1 .details div:first-child{font-size:28px;font-weight:700;letter-spacing:.04em}
+.p1 .details div:last-child{font-size:18px;font-family:'Space Mono',monospace;margin-top:10px;letter-spacing:.08em}
+.p1 .burst{position:absolute;right:40px;bottom:38px;width:210px;height:210px}
+.p1 .burst span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Bangers',sans-serif;font-size:46px;transform:rotate(-8deg)}
+.p2{background:#C4005F url('../../patterns/pop-art/halftone.svg');background-size:180px}
+.p2 .top{padding:44px 64px 0;text-align:center}
+.p2 .kicker{color:#fff;font-size:18px}
+.p2 .burst{position:relative;width:720px;height:720px;margin:16px auto 0}
+.p2 .burst img{width:100%;height:100%}
+.p2 .burst h1{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;font-size:100px;padding:120px;color:#000;transform:rotate(-5deg)}
+.p2 .cyan{background:#00B8E6;border:10px solid #000;margin:0 54px;padding:28px 34px;text-align:center}
+.p2 .cyan h2{font-size:74px;line-height:.92}
+.p2 .details{background:#fff;border:10px solid #000;margin:20px 54px 0;padding:22px 32px;font-size:22px;font-weight:700;display:grid;grid-template-columns:1fr 1fr;gap:6px 20px}
+.p2 .welcome{position:absolute;left:0;right:0;bottom:0;height:92px;background:#000;color:#FFE94A;display:flex;align-items:center;justify-content:center;font-family:'Bangers',sans-serif;font-size:50px;letter-spacing:.08em}
+.p3{background:#fff;padding:26px}
+.p3 .strip{height:1868px;border:10px solid #000;display:grid;grid-template-rows:1fr 1fr 1fr}
+.p3 .cell{border-bottom:10px solid #000;position:relative;overflow:hidden;background:#fff}
+.p3 .cell:last-child{border-bottom:0}
+.p3 .photo img{width:100%;height:100%;object-fit:cover}
+.p3 .cell2{background:#C4005F url('../../patterns/pop-art/halftone.svg');background-size:160px;display:flex;align-items:center;justify-content:center}
+.p3 .bubblebox{position:relative;width:760px}
+.p3 .bubblebox img{width:100%}
+.p3 .bubblebox span{position:absolute;left:82px;right:82px;top:64px;font-family:'Bangers',sans-serif;font-size:92px;line-height:.9;text-align:center;color:#000}
+.p3 .cell3{background:#FFE94A;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.p3 .cell3 h2{font-size:160px;line-height:.85}
+.p3 .cell3 p{font-family:'Archivo Black',sans-serif;font-size:30px;margin-top:16px}
+.p3 .meta{position:absolute;left:20px;right:20px;bottom:20px;display:flex;justify-content:space-between;font-family:'Space Mono',monospace;font-size:16px}
+</style></head><body>
+<div class="post story pop p3"><div class="strip">
+  <div class="cell photo"><img src="../../photos/pop-comic.jpg" alt=""></div>
+  <div class="cell cell2"><div class="bubblebox"><img src="../../patterns/pop-art/speech-bubble.svg" alt=""><span>5 TO 8<br>AT ROSIE'S</span></div></div>
+  <div class="cell cell3"><h2>ALL<br>WELCOME</h2><p>WED 25 NOV / 4 QUEENS WHARF</p><div class="meta"><span>TALL PEOPLE MEETUP</span><span>WELLINGTON</span></div></div>
+</div></div></body></html>

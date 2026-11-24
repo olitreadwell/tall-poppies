@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Surf rad, bring your mates</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        background: #222;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      .post {
+        width: 1080px;
+        height: 1350px;
+        position: relative;
+        overflow: hidden;
+        background: #ff2d87;
+        color: #0a0a0a;
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      .art {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 640px;
+        height: 1350px;
+        background: #ff2d87 url('assets/wave-lines.svg') repeat;
+        background-size: 600px 600px;
+      }
+      .sun {
+        position: absolute;
+        left: 84px;
+        top: 112px;
+        width: 470px;
+        height: 470px;
+        border: 10px solid #0a0a0a;
+        border-radius: 50%;
+        background: repeating-linear-gradient(180deg, #ffe94a 0 24px, #ff2d87 24px 48px);
+      }
+      .snap {
+        position: absolute;
+        left: 66px;
+        top: 846px;
+        width: 308px;
+        height: 236px;
+        border: 10px solid #ffe94a;
+        background: #0a0a0a;
+        transform: rotate(-3deg);
+        overflow: hidden;
+        box-shadow: 16px 16px 0 #0a0a0a;
+      }
+      .snap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 34% center;
+        display: block;
+      }
+      .pane {
+        position: absolute;
+        left: 640px;
+        top: 0;
+        width: 440px;
+        height: 1350px;
+        background: #ff2d87;
+      }
+      .kicker {
+        position: absolute;
+        left: 688px;
+        top: 64px;
+        width: 170px;
+        font-family: 'Space Mono', monospace;
+        font-size: 16px;
+        line-height: 1.45;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      h1 {
+        position: absolute;
+        left: 678px;
+        top: 208px;
+        font-family: 'Bebas Neue', sans-serif;
+        font-weight: 400;
+        font-size: 146px;
+        line-height: 0.8;
+        letter-spacing: -0.01em;
+      }
+      .lede {
+        position: absolute;
+        left: 688px;
+        top: 606px;
+        width: 330px;
+        font-size: 27px;
+        line-height: 1.28;
+        font-weight: 700;
+      }
+      .date {
+        position: absolute;
+        left: 688px;
+        top: 792px;
+        width: 322px;
+        height: 118px;
+        background: #00d4ff;
+        border: 4px solid #0a0a0a;
+        display: flex;
+        align-items: center;
+        padding: 0 22px;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 55px;
+        line-height: 0.9;
+        letter-spacing: 0.02em;
+      }
+      .details {
+        position: absolute;
+        left: 688px;
+        top: 944px;
+        width: 330px;
+        font-family: 'Space Mono', monospace;
+        font-size: 17px;
+        line-height: 1.55;
+        letter-spacing: 0.02em;
+        font-weight: 700;
+      }
+      .details b {
+        display: block;
+        font-size: 19px;
+        letter-spacing: 0.08em;
+      }
+      .tape {
+        position: absolute;
+        left: -28px;
+        bottom: 118px;
+        width: 724px;
+        height: 86px;
+        background: #ffe94a;
+        border-top: 5px solid #0a0a0a;
+        border-bottom: 5px solid #0a0a0a;
+        transform: rotate(-4deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 38px;
+        letter-spacing: 0.04em;
+      }
+      .mark {
+        position: absolute;
+        left: 26px;
+        top: 28px;
+        background: #ffe94a;
+        border: 4px solid #0a0a0a;
+        padding: 8px 14px 9px;
+        font-family: 'Space Mono', monospace;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+      .tag {
+        position: absolute;
+        left: 88px;
+        top: 566px;
+        width: 150px;
+        background: #0a0a0a;
+        color: #ffe94a;
+        font-family: 'Space Mono', monospace;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        line-height: 1.4;
+        padding: 8px 10px;
+        transform: rotate(-2deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="post">
+      <div class="art"></div>
+      <div class="sun"></div>
+      <div class="snap">
+        <img src="../favorites/photos/surf-cc0.jpg" alt="Surfer inside a wave" />
+      </div>
+      <div class="pane"></div>
+      <div class="mark">Wellington / 2026</div>
+      <div class="tag">SURF RAD<br />1991</div>
+      <div class="kicker">Tall people<br />meetup<br />Wellington</div>
+      <h1>BRING<br />A<br />MATE</h1>
+      <p class="lede">Tall is not a<br />membership card.<br />Everyone is welcome.</p>
+      <div class="date">25 NOV<br />5PM TO 8PM</div>
+      <div class="details"><b>ROSIE'S RED-HOT CANTINA</b>4 QUEENS WHARF<br />ALL WELCOME</div>
+      <div class="tape">ALL WELCOME / BRING A MATE</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Bauhaus, find the venue</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;700&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        background: #222;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      .post {
+        width: 1080px;
+        height: 1350px;
+        position: relative;
+        overflow: hidden;
+        background: #ffd400;
+        color: #111111;
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      .left {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 640px;
+        height: 1350px;
+      }
+      .art {
+        position: absolute;
+        left: 640px;
+        top: 0;
+        width: 440px;
+        height: 1350px;
+        overflow: hidden;
+        background: #111111;
+      }
+      .art img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 58% center;
+        display: block;
+      }
+      .redbar {
+        position: absolute;
+        left: 640px;
+        top: 0;
+        width: 14px;
+        height: 1350px;
+        background: #d62828;
+        z-index: 2;
+      }
+      .kicker {
+        position: absolute;
+        left: 64px;
+        top: 58px;
+        font-family: 'Space Mono', monospace;
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+      h1 {
+        position: absolute;
+        left: 54px;
+        top: 118px;
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 172px;
+        line-height: 0.84;
+        letter-spacing: -0.05em;
+      }
+      .circle {
+        position: absolute;
+        left: 492px;
+        top: 92px;
+        width: 122px;
+        height: 122px;
+        border-radius: 50%;
+        background: #d62828;
+      }
+      .venue {
+        position: absolute;
+        left: 64px;
+        top: 428px;
+        width: 522px;
+        background: #1c4fd8;
+        color: #ffffff;
+        padding: 22px 26px 24px;
+      }
+      .venue .small {
+        font-family: 'Space Mono', monospace;
+        font-size: 16px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+      .venue h2 {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 45px;
+        line-height: 0.96;
+        letter-spacing: -0.02em;
+      }
+      .venue p {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 46px;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        margin-top: 8px;
+      }
+      .meta {
+        position: absolute;
+        left: 64px;
+        top: 684px;
+        width: 522px;
+        font-family: 'Space Mono', monospace;
+        font-size: 20px;
+        line-height: 1.6;
+        letter-spacing: 0.03em;
+        font-weight: 700;
+      }
+      .meta b {
+        font-size: 24px;
+        letter-spacing: 0.1em;
+      }
+      .band {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 640px;
+        height: 230px;
+        background: #111111;
+        color: #ffffff;
+      }
+      .band .date {
+        position: absolute;
+        left: 64px;
+        top: 28px;
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 70px;
+        line-height: 0.95;
+        color: #ffd400;
+        letter-spacing: -0.02em;
+      }
+      .band .time {
+        position: absolute;
+        left: 64px;
+        top: 110px;
+        font-family: 'Space Mono', monospace;
+        font-size: 27px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+      .band .place {
+        position: absolute;
+        left: 64px;
+        top: 158px;
+        font-family: 'Space Mono', monospace;
+        font-size: 16px;
+        letter-spacing: 0.12em;
+      }
+      .band .welcome {
+        position: absolute;
+        right: 40px;
+        top: 58px;
+        width: 194px;
+        height: 104px;
+        background: #1c4fd8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 29px;
+        line-height: 0.95;
+        padding: 8px;
+      }
+      .tag {
+        position: absolute;
+        left: 668px;
+        top: 26px;
+        background: #ffd400;
+        color: #111111;
+        font-family: 'Space Mono', monospace;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        padding: 8px 11px;
+        z-index: 3;
+      }
+      .rule {
+        position: absolute;
+        left: 64px;
+        top: 646px;
+        width: 522px;
+        height: 6px;
+        background: #111111;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="post">
+      <div class="left">
+        <div class="kicker">Tall people meetup / Wellington</div>
+        <h1>FIND<br />US</h1>
+        <div class="circle"></div>
+        <div class="venue">
+          <div class="small">Venue / all welcome</div>
+          <h2>ROSIE'S<br />RED-HOT CANTINA</h2>
+          <p>4 QUEENS WHARF</p>
+        </div>
+        <div class="rule"></div>
+        <div class="meta"><b>WED 25 NOV</b><br />5PM TO 8PM<br />WELLINGTON CENTRAL</div>
+        <div class="band">
+          <div class="date">25 NOV</div>
+          <div class="time">5PM TO 8PM</div>
+          <div class="place">4 QUEENS WHARF / ALL WELCOME</div>
+          <div class="welcome">ALL<br />WELCOME</div>
+        </div>
+      </div>
+      <div class="art">
+        <img
+          src="../archive-downloads/bauhaus-grid-poster.jpg"
+          alt="Public domain Bauhaus grid poster"
+        />
+      </div>
+      <div class="redbar"></div>
+      <div class="tag">BAUHAUS / 1925</div>
+    </div>
+  </body>
+</html>
