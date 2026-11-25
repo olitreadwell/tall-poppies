@@ -6,7 +6,7 @@ Event: Wednesday 25 November 2026, 5pm to 8pm, Rosie's Red-Hot Cantina, 4 Queens
 
 ## Start here
 
-- [100-item run sheet](https://docs.google.com/document/d/1pkksCWZSezYyTvtR5bKaqMsKa4mFcmn5xcXRCQNcnzw/edit) covers the night before, setup, the event and follow-up.
+- [Run sheet](run-sheet.md) is a short list of ideas for the night, written so it does not overwhelm the host. The [long Google Doc](https://docs.google.com/document/d/1pkksCWZSezYyTvtR5bKaqMsKa4mFcmn5xcXRCQNcnzw/edit) is optional.
 - [Brand brief](brand-brief.md) explains the visual system and the anti-AI rules.
 - [Copy pack](copy.md) has the Facebook page text, captions, story text, and DMs.
 - [Schedule](schedule.md) gives you 2 to 3 posts per day from 20 to 26 November.
